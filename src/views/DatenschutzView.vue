@@ -3,6 +3,7 @@
     <div style="background-color: #e3dede" class="pa-5">
       <v-row>
         <v-col cols="12">
+
           <v-card class="pa-5">
             <div>
               <div class="col-xs-12 col-lg-9">
@@ -11,7 +12,6 @@
                   Datenschutz­erklärung
                 </h2>
 
-<!--test-->
 
                 <h3>
                   1. Datenschutz auf einen Blick

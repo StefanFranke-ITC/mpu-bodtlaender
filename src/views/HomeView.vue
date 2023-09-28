@@ -6,11 +6,10 @@
       <v-row style="max-width: 100%" class=" mx-0">
         <v-col style=" max-width: 90px">
           <v-img class="logo" src="https://mpu-institut-saar.de/wp-content/uploads/2022/01/cropped-logo-web-transparent.png">
-
           </v-img>
         </v-col>
         <v-col cols="3" class="pl-0 d-flex align-center">
-          <span>
+          <div>
             <h2 class="mb-n6">
             MPU Vorbereitung
 
@@ -19,7 +18,7 @@
           <p class="text-white">
           B. Bodtländer Psychologischer Berater
         </p>
-          </span>
+          </div>
         </v-col>
         <v-col cols="1" class="d-flex align-center">
           <h4 class="text-white">
@@ -61,10 +60,18 @@
         </v-col>
         <v-col class="d-flex justify-center" cols="5">
             <div class="profil-bild">
-
             </div>
         </v-col>
       </v-row>
+        <v-row style="max-width: 100%" class="mt-16 d-flex justify-center mx-0">
+            <v-col cols="10">
+                <v-row  style="max-width: 100%" class="footer mx-0">
+                    <v-col></v-col>
+                    <v-col></v-col>
+                    <v-col></v-col>
+                </v-row>
+            </v-col>
+        </v-row>
     </div>
   </div>
 </template>
@@ -118,11 +125,22 @@ export default ({
 
 }
 .profil-bild{
-  height: 350px;
+  height: 40vh;
   width: 80%;
   background-image: url("https://mpu-institut-saar.de/wp-content/uploads/2022/06/999543c1-1-2048x1367.jpg");
   background-size: cover;
   border-radius: 70px 70px 70px 200px;
   box-shadow: 4px 4px 15px black;
 }
+.footer{
+    margin-top: 4vh;
+    border: 2px solid black;
+    height: 15vh;
+    border-radius: 100px;
+    background-image: linear-gradient(to right, rgba(192, 192, 128, 0.51) 50%, rgba(255, 176, 1, 0.51) 70%);
+    backdrop-filter: blur(4px);
+    box-shadow: 4px 4px 15px black;
+
+}
+
 </style>
