@@ -3,7 +3,7 @@
   <div class="background">
     <div class="background-color">
       <!---  Header   -->
-      <v-row style="max-width: 100%" class="d-flex justify-center mx-0">
+        <v-row style="max-width: 100%" class="d-flex justify-center mx-0">
         <v-col cols="1" style=" max-width: 90px">
           <v-img class=" logo" src="https://mpu-institut-saar.de/wp-content/uploads/2022/01/cropped-logo-web-transparent.png">
           </v-img>
@@ -12,7 +12,6 @@
           <div>
             <h2 class="mb-n6">
             MPU Vorbereitung
-
             </h2>
             <br >
           <p class="text-white">
@@ -52,8 +51,9 @@
         </v-col>
       </v-row>
       <!---  body   -->
-      <v-row style="max-width: 100%" class="mt-16 d-flex justify-center mx-0">
+        <v-row style="max-width: 100%" class="mt-16 d-flex justify-center mx-0">
         <v-col  cols="5">
+            <div style="max-width: 90%">
             <h1 class="text-white">
                 Willkommen beim Institut <br> für MPU-Beratung und<br>  Suchtprävention <br> im Saarland.
             </h1>
@@ -64,10 +64,56 @@
                 In der MPU-Vorbereitung gehe ich mit Ihnen den gleichen Weg, den der
                 Gutachter mit Ihnen im Gespräch beschreitet.
             </p>
-            <div style="max-width: 220px" class="mt-6 d-flex align-center justify-center button-rechts">
-               <h3>
-                   Termin Vereinbaren
-               </h3>
+                <v-dialog width="500">
+                    <template v-slot:activator="{ props }">
+                        <div  v-bind="props" style="max-width: 220px" class="cursor mt-6 d-flex align-center justify-center button-rechts">
+                            <h3>
+                                Termin Vereinbaren
+                            </h3>
+                        </div>
+                    </template>
+                    <template v-slot:default="{ isActive }">
+                        <v-card class="pt-4 kontaktformular">
+                            <v-row  style="width: 100%" class="d-flex justify-center mx-0">
+                                <v-col  cols="10">
+                                    <h4>Fülle Sie das Formular aus und ich melde mich schnellstmöglich bei Ihnen.</h4>
+                                </v-col>
+                                <v-col  cols="10">
+                                    <v-text-field variant="outlined"  label="Vorname">
+
+                                    </v-text-field>
+                                </v-col>
+                                <v-col class="formularinhalte" cols="10">
+                                    <v-text-field variant="outlined"  label="Nachname">
+
+                                    </v-text-field>
+                                </v-col>
+                                <v-col class="formularinhalte" cols="10">
+                                    <v-text-field variant="outlined" label="Email">
+
+                                    </v-text-field>
+                                </v-col>
+                                <v-col class="formularinhalte" cols="10">
+                                    <v-text-field variant="outlined"  label="Handynummer">
+
+                                    </v-text-field>
+                                </v-col>
+
+                            </v-row>
+                            <v-card-actions class="px-14 mb-6 d-flex justify-space-between">
+                                <v-btn
+                                        text="Senden"
+                                        @click="isActive.value = false"
+                                ></v-btn>
+                                <v-btn
+                                        text="Abbrechen "
+                                        @click="isActive.value = false"
+                                ></v-btn>
+
+                            </v-card-actions>
+                        </v-card>
+                    </template>
+                </v-dialog>
             </div>
         </v-col>
         <v-col class="d-flex justify-center" cols="5">
@@ -75,6 +121,7 @@
             </div>
         </v-col>
       </v-row>
+        <!---  footer   -->
         <v-row style="max-width: 100%" class="mt-16 d-flex justify-center mx-0">
             <v-col cols="10">
                 <v-row  style="max-width: 100%" class="footer mx-0">
@@ -200,5 +247,16 @@ export default ({
 .cursor{
     cursor: pointer;
 }
-
+.kontaktformular{
+    height: 600px;
+    width: 350px;
+    background-color: transparent;
+    background-image: linear-gradient(to right, rgba(192, 192, 128, 0.51) 20%, rgba(255, 176, 1, 0.51) 100%);
+    backdrop-filter: blur(4px);
+    border: solid 2px rgba(3, 3, 3, 0.93);
+    border-radius: 30px !important;
+}
+.formularinhalte{
+    margin-top: -60px;
+}
 </style>
