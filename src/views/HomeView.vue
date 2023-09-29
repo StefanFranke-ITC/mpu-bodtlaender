@@ -3,12 +3,12 @@
   <div class="background">
     <div class="background-color">
       <!---  Header   -->
-      <v-row style="max-width: 100%" class=" mx-0">
-        <v-col style=" max-width: 90px">
+      <v-row style="max-width: 100%" class="d-flex justify-center mx-0">
+        <v-col cols="1" style=" max-width: 90px">
           <v-img class=" logo" src="https://mpu-institut-saar.de/wp-content/uploads/2022/01/cropped-logo-web-transparent.png">
           </v-img>
         </v-col>
-        <v-col cols="3" class="ml-9 pl-0 d-flex align-center">
+        <v-col cols="3" class=" pl-0 d-flex align-center">
           <div>
             <h2 class="mb-n6">
             MPU Vorbereitung
@@ -55,11 +55,20 @@
       <v-row style="max-width: 100%" class="mt-16 d-flex justify-center mx-0">
         <v-col  cols="5">
             <h1 class="text-white">
-                Willkommen beim Institut <br> für MPU-Beratung <br> und Suchtprävention <br> im Saarland.
+                Willkommen beim Institut <br> für MPU-Beratung und<br>  Suchtprävention <br> im Saarland.
             </h1>
             <p class="text-white mt-10">
                 Ihr Ansprechpartner rund um das Thema Medizinisch-Psychologische Untersuchung (MPU).
             </p>
+            <p class="text-white mt-4">
+                In der MPU-Vorbereitung gehe ich mit Ihnen den gleichen Weg, den der
+                Gutachter mit Ihnen im Gespräch beschreitet.
+            </p>
+            <div style="max-width: 220px" class="mt-6 d-flex align-center justify-center button-rechts">
+               <h3>
+                   Termin Vereinbaren
+               </h3>
+            </div>
         </v-col>
         <v-col class="d-flex justify-center" cols="5">
             <div class="profil-bild">
@@ -69,13 +78,51 @@
         <v-row style="max-width: 100%" class="mt-16 d-flex justify-center mx-0">
             <v-col cols="10">
                 <v-row  style="max-width: 100%" class="footer mx-0">
-                    <v-col></v-col>
+                    <v-col class="d-flex justify-center align-center">
+                        <Icon class="ml-12" style="font-size: 40px" icon="streamline:phone-telephone-android-phone-mobile-device-smartphone-iphone" />
+                        <div class="text-center" style="width: 100%">
+                            <h2>
+                                Ruf mich an
+                            </h2>
+                            <h4>
+                                <a class="text-black" target="_blank" href="tel:+4915121225525">
+                                    015121225525
+                                </a>
+                            </h4>
+                        </div>
+                    </v-col>
                     <v-divider class="border-opacity-100" vertical="true"></v-divider>
-                    <v-col></v-col>
+                    <v-col class="d-flex align-center">
+                        <Icon style="font-size: 40px" class="ml-5" icon="line-md:email" />
+                        <div class="text-center" style=" width: 100%" >
+                        <h2>
+                            Schreib mir eine Mail
+                        </h2>
+                        <h4 >
+                            <a class="text-black" target="_blank" href="mailto:info@example.com">
+                            Info@MPU-Institut-Saar.de
+                            </a>
+                        </h4>
+
+                        </div>
+                    </v-col >
                     <v-divider class="border-opacity-100" vertical="true"></v-divider>
-                    <v-col></v-col>
-                    <v-divider class="border-opacity-100" vertical="true"></v-divider>
-                    <v-col></v-col>
+                    <v-col class="d-flex align-center">
+                        <Icon  style="font-size: 40px" class="ml-5" icon="tdesign:location" />
+                        <div class="text-center" style=" width: 100%" >
+                            <h2>
+                                So findest du mich
+                            </h2>
+                            <h4 >
+                                <a class="text-black" target="_blank" href="https://www.google.com/maps/place/Alter+Woog+13,+66606+St.+Wendel/@49.4682475,7.1711813,17z/data=!3m1!4b1!4m6!3m5!1s0x4795c02751fedd21:0xa98259caf324f91d!8m2!3d49.4682475!4d7.1737616!16s%2Fg%2F11c25gpd9k?entry=ttu">
+                                    Alter Wog 13, 66606 Sankt Wendel
+                                </a>
+                            </h4>
+
+                        </div>
+
+                    </v-col>
+
                 </v-row>
             </v-col>
         </v-row>
@@ -84,12 +131,12 @@
 </template>
 
 <script>
-
+import { Icon } from '@iconify/vue';
 export default ({
   name: 'HomeView',
 
   components: {
-
+      Icon,
   },
 });
 </script>
@@ -111,7 +158,6 @@ export default ({
   border-radius: 100%;
   background-color: white;
   height: 70px;
-    margin-left: 40px;
   width: 70px;
 }
 .ueber-mich{
