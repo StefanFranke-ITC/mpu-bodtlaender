@@ -4,7 +4,7 @@
     <div class="background-color">
       <!---  Header   -->
         <v-row style="max-width: 100%" class="d-flex justify-center mx-0">
-        <v-col cols="1" style=" max-width: 90px">
+        <v-col cols="1" style=" max-width: 90px" @click="$router.push('/')">
           <v-img class=" logo" src="https://mpu-institut-saar.de/wp-content/uploads/2022/01/cropped-logo-web-transparent.png">
           </v-img>
         </v-col>
@@ -20,18 +20,18 @@
           </div>
         </v-col>
         <v-col cols="1" class="d-flex align-center">
-          <h4 class="cursor text-white">
+          <h4 class="cursor text-white" @click="$router.push('/mpu')">
             MPU
           </h4>
         </v-col>
         <v-col cols="1" class="d-flex align-center">
-          <h4 class="cursor text-white">
-            preise
+          <h4 class="cursor text-white" @click="$router.push('/preise')">
+            Preise
           </h4>
         </v-col>
 
         <v-col cols="1" class="d-flex align-center">
-          <h4 class="cursor text-white">
+          <h4 class="cursor text-white" @click="$router.push('/impressum')">
             Impressum
           </h4>
         </v-col>
@@ -76,7 +76,7 @@
                         <v-card class="pt-4 kontaktformular">
                             <v-row  style="width: 100%" class="d-flex justify-center mx-0">
                                 <v-col  cols="10">
-                                    <h4>Fülle Sie das Formular aus und ich melde mich schnellstmöglich bei Ihnen.</h4>
+                                    <h3>Bitte füllen Sie das Formular aus, und ich werde mich umgehend bei Ihnen melden.</h3>
                                 </v-col>
                                 <v-col  cols="10">
                                     <v-text-field variant="outlined"  label="Vorname">
@@ -161,7 +161,7 @@
                                 So findest du mich
                             </h2>
                             <h4 >
-                                <a class="text-black" target="_blank" href="https://www.google.com/maps/place/Alter+Woog+13,+66606+St.+Wendel/@49.4682475,7.1711813,17z/data=!3m1!4b1!4m6!3m5!1s0x4795c02751fedd21:0xa98259caf324f91d!8m2!3d49.4682475!4d7.1737616!16s%2Fg%2F11c25gpd9k?entry=ttu">
+                                <a class="text-black" target="_blank" href="https://www.google.com/maps/place/Institut+f%C3%BCr+MPU-Beratung+und+Suchtpr%C3%A4vention+St.Wendel+Saar/@49.4682475,7.1737616,17z/data=!3m1!5s0x4795c0274e5a43e3:0xd195be627346ce6b!4m15!1m8!3m7!1s0x4795c02751fedd21:0xa98259caf324f91d!2sAlter+Woog+13,+66606+St.+Wendel!3b1!8m2!3d49.4682475!4d7.1737616!16s%2Fg%2F11c25gpd9k!3m5!1s0x6f4b9a15b5480a27:0x7e39569ecef92420!8m2!3d49.4682475!4d7.1737616!16s%2Fg%2F11pvcv2d88?entry=ttu">
                                     Alter Wog 13, 66606 Sankt Wendel
                                 </a>
                             </h4>
@@ -187,7 +187,7 @@ export default ({
   },
 });
 </script>
-<style>
+<style scoped>
 .background {
   background-image: url("../assets/Background.png");
   background-size: cover;
@@ -213,8 +213,8 @@ export default ({
   height: 50px;
   width: 100%;
   box-shadow: 4px 4px 7px black;
-
 }
+
 .button-rechts{
   border-radius: 30px;
   border: 2px solid black;
@@ -244,14 +244,16 @@ export default ({
     padding: 20px;
 
 }
-.cursor{
-    cursor: pointer;
+
+.cursor:hover{
+  cursor: pointer;
+  color: #C0C080 !important;
 }
 .kontaktformular{
-    height: 600px;
-    width: 350px;
+    height: 700px;
+    width: 500px;
     background-color: transparent;
-    background-image: linear-gradient(to right, rgba(192, 192, 128, 0.51) 20%, rgba(255, 176, 1, 0.51) 100%);
+    background-image: linear-gradient(to right, rgba(192, 192, 128, 0.70) 20%, rgba(255, 176, 1, 0.70) 100%);
     backdrop-filter: blur(4px);
     border: solid 2px rgba(3, 3, 3, 0.93);
     border-radius: 30px !important;
