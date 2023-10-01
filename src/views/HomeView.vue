@@ -407,7 +407,7 @@
                                   <h2>Impressum</h2>
                                   <p>Name<br/>
 
-                                      Position<git stabr/>
+                                      Position <br>
                                       Straße<br/>
                                       Wohnort</p>
                                   <!--        Telefon: <a class="email" href="tel:+491635059366">+49 163 5059366</a> <br>-->
@@ -697,5 +697,7 @@ export default {
 }
 .v-tab__slider{
     bottom: -6px;
+    background-image: linear-gradient(to right, rgba(192, 192, 128, 0.70) 20%, rgba(255, 176, 1, 0.70) 100%);
+
 }
 </style>
