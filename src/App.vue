@@ -8,5 +8,8 @@
 
 <style>
 
-
+::-webkit-scrollbar {
+    width: 0;
+    background: transparent;
+}
 </style>

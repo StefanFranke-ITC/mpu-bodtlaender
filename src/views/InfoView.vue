@@ -4,7 +4,6 @@
       <!---  Header   -->
 
         <HeaderComponent></HeaderComponent>
-
     </div>
   </div>
 </template>

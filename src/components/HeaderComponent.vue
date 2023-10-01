@@ -41,11 +41,63 @@
             </div>
         </v-col>
         <v-col cols="2" class="d-flex align-center">
-            <div class="cursor d-flex align-center justify-center  button-rechts">
-                <h3>
-                    Kontakt
-                </h3>
-            </div>
+            <v-dialog width="500">
+                <template v-slot:activator="{ props }">
+                    <div  v-bind="props" style="max-width: 220px" class="cursor d-flex align-center justify-center button-rechts">
+                        <h3>
+                            Kontakt
+                        </h3>
+                    </div>
+                </template>
+                <template v-slot:default="{ isActive }">
+                    <v-card class="pt-4 kontaktformular">
+                        <v-row  style="width: 100%" class="d-flex justify-center mx-0">
+                            <v-col  cols="10">
+                                <h3>Bitte füllen Sie das Formular aus, und ich werde mich umgehend bei Ihnen melden.</h3>
+                            </v-col>
+                            <v-col  cols="10">
+                                <v-text-field variant="outlined"  label="Vorname">
+
+                                </v-text-field>
+                            </v-col>
+                            <v-col class="formularinhalte" cols="10">
+                                <v-text-field variant="outlined"  label="Nachname">
+
+                                </v-text-field>
+                            </v-col>
+                            <v-col class="formularinhalte" cols="10">
+                                <v-text-field variant="outlined" label="Email">
+
+                                </v-text-field>
+                            </v-col>
+                            <v-col class="formularinhalte" cols="10">
+                                <v-text-field variant="outlined"  label="Handynummer">
+
+                                </v-text-field>
+                            </v-col>
+                            <v-col class="formularinhalte" cols="10">
+                                <v-textarea variant="outlined"  label="Nachricht">
+
+                                </v-textarea>
+                            </v-col>
+
+                        </v-row>
+                        <v-card-actions class="px-14 mb-6 d-flex justify-space-between">
+                            <v-btn
+                                    text="Senden"
+                                    @click="isActive.value = false"
+                            ></v-btn>
+                            <v-btn
+                                    text="Abbrechen "
+                                    @click="isActive.value = false"
+                            ></v-btn>
+
+                        </v-card-actions>
+                    </v-card>
+                </template>
+            </v-dialog>
+
+
         </v-col>
     </v-row>
 
