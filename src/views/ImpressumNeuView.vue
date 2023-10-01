@@ -1,5 +1,5 @@
 <template>
-  <div class="background">
+  <div v-if="!$store.state.mobile"  class="background">
     <div class="background-color">
       <!---  Header   -->
 
@@ -68,7 +68,7 @@
           </div>
         </v-col>
         <v-col class="d-flex justify-center" cols="5">
-          <div class="profil-bild">
+          <div class="profil-bild1">
           </div>
         </v-col>
       </v-row>
@@ -100,10 +100,7 @@ export default {
 }
 
 
-.cursor:hover{
-  cursor: pointer;
-  color: #C0C080 !important;
-}
+
 .kontaktformular{
   height: 700px;
   width: 500px;
@@ -125,7 +122,7 @@ export default {
   width: 70px;
 }
 
-.profil-bild{
+.profil-bild1{
   height: 40vh;
   width: 100%;
   background-image: url("https://atm-deutschland.com/wp-content/uploads/2020/03/imressum.jpg");

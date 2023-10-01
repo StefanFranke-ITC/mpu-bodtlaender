@@ -1,7 +1,5 @@
-
 <template>
-
-    <v-row style="max-width: 100%" class="d-flex justify-center mx-0">
+    <v-row v-if="!$store.state.mobile"  style="max-width: 100%" class="d-flex justify-center mx-0">
         <v-col  cols="1" style=" max-width: 90px" class="cursor" @click="$router.push('/')">
             <v-img @click="$router.push('/')" class=" logo" src="https://mpu-institut-saar.de/wp-content/uploads/2022/01/cropped-logo-web-transparent.png">
             </v-img>
@@ -105,11 +103,8 @@
                     </v-card>
                 </template>
             </v-dialog>
-
-
         </v-col>
     </v-row>
-
 </template>
 
 
@@ -117,6 +112,10 @@
 
 </script>
 
-<style scoped>
-
+<style >
+.cursor:hover{
+    cursor: pointer;
+    color: rgba(255, 176, 1, 0.7) !important;
+    text-shadow: 1px 1px  black;
+}
 </style>

@@ -1,6 +1,5 @@
 <template>
-
-  <div class="background">
+  <div v-if="!$store.state.mobile" class="background">
     <div class="background-color">
       <!---  Header   -->
         <HeaderComponent></HeaderComponent>
@@ -10,12 +9,18 @@
         <v-row style="max-width: 100%" class="mt-16 d-flex justify-center mx-0">
         <v-col  cols="5">
             <div style="max-width: 90%">
-            <h1 class="text-white">
+            <h1 v-if="!$store.state.tabletHorizontal" class="text-white">
                 Willkommen beim Institut <br> für MPU-Beratung und<br>  Suchtprävention <br> im Saarland.
             </h1>
-            <p class="text-white mt-10">
+                <h3 v-if="$store.state.tabletHorizontal" class="text-white">
+                    Willkommen beim Institut <br> für MPU-Beratung und<br>  Suchtprävention <br> im Saarland.
+                </h3>
+            <p v-if="!$store.state.tabletHorizontal" class="text-white mt-10">
                 Ihr Ansprechpartner rund um das Thema Medizinisch-Psychologische Untersuchung (MPU).
             </p>
+                <p v-if="$store.state.tabletHorizontal" class="text-white mt-3">
+                    Ihr Ansprechpartner rund um das Thema Medizinisch-Psychologische Untersuchung (MPU).
+                </p>
             <p class="text-white mt-4">
                 In der MPU-Vorbereitung gehe ich mit Ihnen den gleichen Weg, den der
                 Gutachter mit Ihnen im Gespräch beschreitet.
@@ -80,13 +85,16 @@
         <!---  footer   -->
         <v-row style="max-width: 100%" class="mt-16 d-flex justify-center mx-0">
             <v-col cols="10">
-                <v-row  style="max-width: 100%" class="footer mx-0">
+                <v-row  style="max-width: 100%" :class="$store.state.tabletHorizontal ? 'footer-tablet' : 'footer' " class="footer mx-0">
                     <v-col class="d-flex justify-center align-center">
                         <Icon class="ml-12" style="font-size: 40px" icon="streamline:phone-telephone-android-phone-mobile-device-smartphone-iphone" />
                         <div class="text-center" style="width: 100%">
-                            <h2>
+                            <h2 v-if="!$store.state.tabletHorizontal">
                                 Ruf mich an
                             </h2>
+                            <h4 v-if="$store.state.tabletHorizontal">
+                                Ruf mich an
+                            </h4>
                             <h4>
                                 <a class="text-black" target="_blank" href="tel:+4915121225525">
                                     015121225525
@@ -98,9 +106,12 @@
                     <v-col class="d-flex align-center">
                         <Icon style="font-size: 40px" class="ml-5" icon="line-md:email" />
                         <div class="text-center" style=" width: 100%" >
-                        <h2>
+                        <h2 v-if="!$store.state.tabletHorizontal">
                             Schreib mir eine Mail
                         </h2>
+                            <h4 v-if="$store.state.tabletHorizontal">
+                                Schreib mir eine Mail
+                            </h4>
                         <h4 >
                             <a class="text-black" target="_blank" href="mailto:info@example.com">
                             Info@MPU-Institut-Saar.de
@@ -113,9 +124,12 @@
                     <v-col class="d-flex align-center">
                         <Icon  style="font-size: 40px" class="ml-5" icon="tdesign:location" />
                         <div class="text-center" style=" width: 100%" >
-                            <h2>
+                            <h2 v-if="!$store.state.tabletHorizontal">
                                 So findest du mich
                             </h2>
+                            <h4 v-if="$store.state.tabletHorizontal">
+                                So findest du mich
+                            </h4>
                             <h4 >
                                 <a class="text-black" target="_blank" href="https://www.google.com/maps/place/Institut+f%C3%BCr+MPU-Beratung+und+Suchtpr%C3%A4vention+St.Wendel+Saar/@49.4682475,7.1737616,17z/data=!3m1!5s0x4795c0274e5a43e3:0xd195be627346ce6b!4m15!1m8!3m7!1s0x4795c02751fedd21:0xa98259caf324f91d!2sAlter+Woog+13,+66606+St.+Wendel!3b1!8m2!3d49.4682475!4d7.1737616!16s%2Fg%2F11c25gpd9k!3m5!1s0x6f4b9a15b5480a27:0x7e39569ecef92420!8m2!3d49.4682475!4d7.1737616!16s%2Fg%2F11pvcv2d88?entry=ttu">
                                     Alter Wog 13, 66606 Sankt Wendel
@@ -131,6 +145,9 @@
         </v-row>
     </div>
   </div>
+  <div v-if="$store.state.mobile">
+
+  </div>
 </template>
 
 <script>
@@ -138,19 +155,61 @@ import { Icon } from '@iconify/vue';
 import HeaderComponent from "@/components/HeaderComponent.vue";
 export default ({
   name: 'HomeView',
+    created() {
+    },
+    mounted() {
 
+    },
+    methods:{
+        resize() {
+            window.addEventListener('resize', this.checkMobileView);
+        },
+        checkMobileView() {
+            console.log('yes')
+            if (window.innerWidth >= 1800) {
+                this.wide = true;
+                this.$store.state.wide = true;
+            } else {
+                this.wide = false;
+                this.$store.state.wide = false;
+
+            }
+            if (window.innerWidth <= 1050) {
+                this.mobile = true;
+                this.$store.state.mobile = true;
+            } else {
+                this.mobile = false;
+                this.$store.state.mobile = false;
+
+            }
+            if (window.innerWidth <= 1300) {
+                this.tabletHorizontal = true
+                this.$store.state.tablet = true
+            } else {
+                this.tabletHorizontal = false
+                this.$store.state.tablet = false
+            }
+        }
+    },
   components: {
       Icon,HeaderComponent
   },
 });
 </script>
-<style >
+<style scoped>
 .background {
   background-image: url("../assets/Background.png");
   background-size: cover;
   height: 100%;
   position: fixed;
   width: 100%;
+}
+.background {
+    background-image: url("../assets/Background.png");
+    background-size: cover;
+    height: 100%;
+    position: fixed;
+    width: 100%;
 }
 .background-color{
   background-image: linear-gradient(to right, #78684F 50%, rgba(0, 255, 0, 0.03) 70%);
@@ -190,6 +249,7 @@ export default ({
   border-radius: 70px 70px 70px 200px;
   box-shadow: 4px 4px 15px black;
 }
+
 .footer{
     margin-top: 4vh;
     border: 2px solid black;
@@ -199,12 +259,20 @@ export default ({
     backdrop-filter: blur(4px);
     box-shadow: 4px 4px 15px black;
     padding: 20px;
-
 }
-
+.footer-tablet{
+    margin-top: 4vh;
+    border: 2px solid black;
+    height: 15vh;
+    border-radius: 100px;
+    background-image: linear-gradient(to right, rgba(192, 192, 128, 0.51) 50%, rgba(255, 176, 1, 0.51) 70%);
+    backdrop-filter: blur(4px);
+    box-shadow: 4px 4px 15px black;
+    padding: 8px;
+}
 .cursor:hover{
   cursor: pointer;
-  color: #C0C080 !important;
+  color: rgba(255, 176, 1, 0.7) !important;
 }
 .kontaktformular{
     height: 700px;

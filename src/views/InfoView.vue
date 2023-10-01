@@ -1,5 +1,5 @@
 <template>
-  <div class="background">
+  <div v-if="!$store.state.mobile"  class="background">
     <div class="background-color">
       <!---  Header   -->
 
@@ -32,10 +32,7 @@ export default {
 }
 
 
-.cursor:hover{
-  cursor: pointer;
-  color: #C0C080 !important;
-}
+
 .kontaktformular{
   height: 700px;
   width: 500px;
@@ -57,14 +54,7 @@ export default {
   width: 70px;
 }
 
-.profil-bild{
-  height: 40vh;
-  width: 100%;
-  background-image: url("https://atm-deutschland.com/wp-content/uploads/2020/03/imressum.jpg");
-  background-size: cover;
-  border-radius: 70px 70px 70px 200px;
-  box-shadow: 4px 4px 15px black;
-}
+
 
 .ueber-mich{
   border-radius: 30px;
