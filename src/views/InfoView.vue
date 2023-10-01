@@ -36,15 +36,7 @@ export default {
   cursor: pointer;
   color: #C0C080 !important;
 }
-.kontaktformular{
-  height: 700px;
-  width: 500px;
-  background-color: transparent;
-  background-image: linear-gradient(to right, rgba(192, 192, 128, 0.70) 20%, rgba(255, 176, 1, 0.70) 100%);
-  backdrop-filter: blur(4px);
-  border: solid 2px rgba(3, 3, 3, 0.93);
-  border-radius: 30px !important;
-}
+
 .formularinhalte{
   margin-top: -60px;
 }

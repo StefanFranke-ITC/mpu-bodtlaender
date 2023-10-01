@@ -35,22 +35,22 @@
                                     <h3>Bitte füllen Sie das Formular aus, und ich werde mich umgehend bei Ihnen melden.</h3>
                                 </v-col>
                                 <v-col  cols="10">
-                                    <v-text-field variant="outlined"  label="Vorname">
+                                    <v-text-field variant="outlined"  label="Vorname" v-model="vorname">
 
                                     </v-text-field>
                                 </v-col>
                                 <v-col class="formularinhalte" cols="10">
-                                    <v-text-field variant="outlined"  label="Nachname">
+                                    <v-text-field variant="outlined"  label="Nachname" v-model="nachname">
 
                                     </v-text-field>
                                 </v-col>
                                 <v-col class="formularinhalte" cols="10">
-                                    <v-text-field variant="outlined" label="Email">
+                                    <v-text-field variant="outlined" label="Email" v-model="email">
 
                                     </v-text-field>
                                 </v-col>
                                 <v-col class="formularinhalte" cols="10">
-                                    <v-text-field variant="outlined"  label="Handynummer">
+                                    <v-text-field variant="outlined"  label="Handynummer" v-model="handynummer">
 
                                     </v-text-field>
                                 </v-col>
@@ -59,7 +59,7 @@
                             <v-card-actions class="px-14 mb-6 d-flex justify-space-between">
                                 <v-btn
                                         text="Senden"
-                                        @click="isActive.value = false"
+                                        @click="sendAppointmentEmail"
                                 ></v-btn>
                                 <v-btn
                                         text="Abbrechen "
@@ -136,15 +136,75 @@
 <script>
 import { Icon } from '@iconify/vue';
 import HeaderComponent from "@/components/HeaderComponent.vue";
-export default ({
+import axios from "axios";
+export default {
   name: 'HomeView',
-
+  data() {
+    return {
+      vorname: '',
+      nachname: '',
+      email: '',
+      handynummer: '',
+      test: false,
+    }
+  },
   components: {
       Icon,HeaderComponent
   },
-});
+  methods: {
+    async sendAppointmentEmail() {
+      try {
+      const response = await axios.post('/sendMailAsHTML', {
+            "to": this.$store.state.email,
+            "subject": this.vorname +" "+ this.nachname +" möchte mit dir einen Termin vereinbaren",
+            "htmlText": "<div><h3>Hallo Benjamin,</h3><p>"+this.vorname +" "+ this.nachname+ " möchte mit dir einen neuen Termin vereinbaren. Im Folgenden siehst du seine eingetragenen Daten:</p><p>Vorname: "+this.vorname+"<br>Nachname: "+this.nachname+"<br>Telefonnummer: <a href=\"tel:"+this.handynummer+"\">"+this.handynummer+"</a><br>Email: <a href=\"mailto:"+this.email+"\">"+this.email+"</a></p><br><p>Mit freundlichen Grüßen<br>Dein FastGlobeIT-Team</p><i>Diese E-Mail wurde automatisch erzeugt.</i></div>"
+          }
+      )
+        console.log(response)
+      } catch (e) {
+      console.log(e)
+      }
+
+      try {
+        const response = await axios.post('/sendMailAsHTML', {
+              "to": this.email,
+              "subject": "Sie haben eine Terminanfrage geschickt",
+              "htmlText": `
+    <div>
+      <h3>
+        Hallo `+this.vorname+` `+this.nachname+`
+      </h3>
+      <p>
+        Sie haben eine Terminanfrage an Benjamin Bodtländer verschickt. Es wird sich, so schnell wie möglich, bei Ihnen melden.
+      </p>
+      <p>
+        Falls weitere Probleme oder Fragen entstehen, bitten wir Sie, das Kontaktformular auf
+        <a href="https://mpu-institut-saar.de/">www.mpu-institut-saar.de</a> auszufüllen
+        und diese konkret zu schildern.
+      </p>
+
+      <br>
+      <p>
+        Mit freundlichen Grüßen
+        <br>
+        <a href="https://fastglobeit.de"> Ihr FastGlobeIT-Team</a>
+      </p>
+      <i>Diese E-Mail wurde automatisch erzeugt.</i>
+    </div>
+  `
+            }
+
+        )
+        console.log(response)
+      } catch (e) {
+        console.log(e)
+      }
+    }
+
+  }
+};
 </script>
-<style >
+<style scoped>
 .background {
   background-image: url("../assets/Background.png");
   background-size: cover;
