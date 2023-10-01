@@ -40,22 +40,22 @@
                                     <h3>Bitte füllen Sie das Formular aus, und ich werde mich umgehend bei Ihnen melden.</h3>
                                 </v-col>
                                 <v-col  cols="10">
-                                    <v-text-field variant="outlined"  label="Vorname">
+                                    <v-text-field variant="outlined" type="name" label="Vorname">
 
                                     </v-text-field>
                                 </v-col>
                                 <v-col class="formularinhalte" cols="10">
-                                    <v-text-field variant="outlined"  label="Nachname">
+                                    <v-text-field variant="outlined" type="name" label="Nachname">
 
                                     </v-text-field>
                                 </v-col>
                                 <v-col class="formularinhalte" cols="10">
-                                    <v-text-field variant="outlined" label="Email">
+                                    <v-text-field variant="outlined" type="email" label="Email">
 
                                     </v-text-field>
                                 </v-col>
                                 <v-col class="formularinhalte" cols="10">
-                                    <v-text-field variant="outlined"  label="Handynummer">
+                                    <v-text-field variant="outlined" type="tel" label="Handynummer">
 
                                     </v-text-field>
                                 </v-col>
@@ -153,14 +153,71 @@
 <script>
 import { Icon } from '@iconify/vue';
 import HeaderComponent from "@/components/HeaderComponent.vue";
+import axios from "axios";
 export default ({
   name: 'HomeView',
+  data() {
+    return {
+      vorname: '',
+      nachname: '',
+      email: '',
+      handynummer: '',
+    }
+  },
     created() {
     },
     mounted() {
 
     },
     methods:{
+      async sendAppointmentEmail() {
+        try {
+          const response = await axios.post('/sendMailAsHTML', {
+                "to": this.$store.state.email,
+                "subject": this.vorname +" "+ this.nachname +" möchte mit dir einen Termin vereinbaren",
+                "htmlText": "<div><h3>Hallo Benjamin,</h3><p>"+this.vorname +" "+ this.nachname+ " möchte mit dir einen neuen Termin vereinbaren. Im Folgenden siehst du seine eingetragenen Daten:</p><p>Vorname: "+this.vorname+"<br>Nachname: "+this.nachname+"<br>Telefonnummer: <a href=\"tel:"+this.handynummer+"\">"+this.handynummer+"</a><br>Email: <a href=\"mailto:"+this.email+"\">"+this.email+"</a></p><br><p>Mit freundlichen Grüßen<br>Dein FastGlobeIT-Team</p><i>Diese E-Mail wurde automatisch erzeugt.</i></div>"
+              }
+          )
+          console.log(response)
+        } catch (e) {
+          console.log(e)
+        }
+
+        try {
+          const response = await axios.post('/sendMailAsHTML', {
+                "to": this.email,
+                "subject": "Sie haben eine Terminanfrage geschickt",
+                "htmlText": `
+    <div>
+      <h3>
+        Hallo `+this.vorname+` `+this.nachname+`
+      </h3>
+      <p>
+        Sie haben eine Terminanfrage an Benjamin Bodtländer verschickt. Es wird sich, so schnell wie möglich, bei Ihnen melden.
+      </p>
+      <p>
+        Falls weitere Probleme oder Fragen entstehen, bitten wir Sie, das Kontaktformular auf
+        <a href="https://mpu-institut-saar.de/">www.mpu-institut-saar.de</a> auszufüllen
+        und diese konkret zu schildern.
+      </p>
+
+      <br>
+      <p>
+        Mit freundlichen Grüßen
+        <br>
+        <a href="https://fastglobeit.de"> Ihr FastGlobeIT-Team</a>
+      </p>
+      <i>Diese E-Mail wurde automatisch erzeugt.</i>
+    </div>
+  `
+              }
+
+          )
+          console.log(response)
+        } catch (e) {
+          console.log(e)
+        }
+      },
         resize() {
             window.addEventListener('resize', this.checkMobileView);
         },
