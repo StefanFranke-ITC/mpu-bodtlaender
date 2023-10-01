@@ -145,8 +145,140 @@
         </v-row>
     </div>
   </div>
-  <div v-if="$store.state.mobile">
+  <div class="background-mobile" v-if="$store.state.mobile">
+      <div class="background-color-mobile">
+        <HeaderComponent></HeaderComponent>
+          <div class="tab-card">
+              <v-tabs
+                      v-model="tab"
+                      color="rgba(255, 176, 1, 0.7)"
+                      align-tabs="center"
+              >
+                  <v-tab :value="1">MPU</v-tab>
+                  <v-tab :value="2">Info</v-tab>
+                  <v-tab :value="3">Kontakt</v-tab>
+                  <v-tab :value="4">Über mich</v-tab>
 
+              </v-tabs>
+
+              <v-window v-model="tab">
+                  <v-window-item
+                          :value="1"
+                  >
+                      <v-container>
+                          <v-row   style="width: 100%" class=" d-flex justify-center mx-0">
+                              <v-col cols="10">
+                                  <h4 class="text-white text-center">
+                                      Willkommen beim Institut
+                                      für MPU-Beratung und
+                                      Suchtprävention
+                                      im Saarland.
+                                  </h4>
+
+                              </v-col>
+                              <v-col cols="10">
+                                  <div class="profil-bild-mobile">
+                                      <v-dialog width="500">
+                                          <template v-slot:activator="{ props }">
+                                              <div   v-bind="props" style="position: relative; left: -20%; top: 70%;transform: scale(0.6); max-width: 220px" class="cursor mt-6 d-flex align-center justify-center button-rechts">
+                                                  <h3>
+                                                      Termin Vereinbaren
+                                                  </h3>
+                                              </div>
+                                          </template>
+                                          <template v-slot:default="{ isActive }">
+                                              <v-card style="transform: scale(0.55)" class=" pt-4 kontaktformular">
+                                                  <v-row  style="width: 100%" class="d-flex justify-center mx-0">
+                                                      <v-col  cols="10">
+                                                          <h3>Bitte füllen Sie das Formular aus, und ich werde mich umgehend bei Ihnen melden.</h3>
+                                                      </v-col>
+                                                      <v-col  cols="10">
+                                                          <v-text-field variant="outlined" type="name" v-model="vorname" label="Vorname">
+
+                                                          </v-text-field>
+                                                      </v-col>
+                                                      <v-col class="formularinhalte" cols="10">
+                                                          <v-text-field variant="outlined" type="name" v-model="nachname" label="Nachname">
+
+                                                          </v-text-field>
+                                                      </v-col>
+                                                      <v-col class="formularinhalte" cols="10">
+                                                          <v-text-field variant="outlined" type="email" v-model="email" label="Email">
+
+                                                          </v-text-field>
+                                                      </v-col>
+                                                      <v-col class="formularinhalte" cols="10">
+                                                          <v-text-field variant="outlined" type="tel" v-model="handynummer" label="Handynummer">
+
+                                                          </v-text-field>
+                                                      </v-col>
+
+                                                  </v-row>
+                                                  <v-card-actions class="px-14 mb-6 d-flex justify-space-between">
+                                                      <v-btn
+                                                              text="Senden"
+                                                              @click="sendAppointmentEmail"
+                                                      ></v-btn>
+                                                      <v-btn
+                                                              text="Abbrechen "
+                                                              @click="isActive.value = false"
+                                                      ></v-btn>
+
+                                                  </v-card-actions>
+                                              </v-card>
+                                          </template>
+                                      </v-dialog>
+                                  </div>
+                              </v-col>
+                              <v-col cols="10">
+                                  <p style="font-size: 14px" class="mt-n3 text-white text-center">
+                                      Ihr Ansprechpartner rund um das Thema Medizinisch-Psychologische Untersuchung (MPU). <br><br>
+
+                                      In der MPU-Vorbereitung gehe ich mit Ihnen den gleichen Weg, den der Gutachter mit Ihnen im Gespräch beschreitet.
+                                  </p>
+                              </v-col>
+                          </v-row>
+
+                      </v-container>
+                  </v-window-item>
+                  <v-window-item
+
+                          :value="2"
+                  >
+                      <v-container>
+                          <v-row   style="width: 100%" class=" d-flex justify-center mx-0">
+                              <v-col cols="10">
+                                  <h4 class="text-white text-center">
+                                      Willkommen beim Institut
+                                      für MPU-Beratung und
+                                      Suchtprävention
+                                      im Saarland.
+                                  </h4>
+
+                              </v-col>
+                              <v-col cols="10">
+                                  <div class="profil-bild-mobile">
+
+                                  </div>
+                              </v-col>
+                              <v-col cols="10">
+                                  <p style="font-size: 14px" class="mt-n3 text-white text-center">
+                                      Ihr Ansprechpartner rund um das Thema Medizinisch-Psychologische Untersuchung (MPU). <br><br>
+
+                                      In der MPU-Vorbereitung gehe ich mit Ihnen den gleichen Weg, den der Gutachter mit Ihnen im Gespräch beschreitet.
+                                  </p>
+                              </v-col>
+                          </v-row>
+
+                      </v-container>
+                  </v-window-item>
+
+              </v-window>
+
+
+          </div>
+          <FooterComponent></FooterComponent>
+      </div>
   </div>
 </template>
 
@@ -154,6 +286,7 @@
 import { Icon } from '@iconify/vue';
 import HeaderComponent from "@/components/HeaderComponent.vue";
 import axios from "axios";
+import FooterComponent from "@/components/FooterComponent.vue";
 export default {
   name: 'HomeView',
   data() {
@@ -162,6 +295,7 @@ export default {
       nachname: '',
       email: '',
       handynummer: '',
+      tab:1,
     }
   },
     created() {
@@ -218,37 +352,9 @@ export default {
           console.log(e)
         }
       },
-        resize() {
-            window.addEventListener('resize', this.checkMobileView);
-        },
-        checkMobileView() {
-            console.log('yes')
-            if (window.innerWidth >= 1800) {
-                this.wide = true;
-                this.$store.state.wide = true;
-            } else {
-                this.wide = false;
-                this.$store.state.wide = false;
-
-            }
-            if (window.innerWidth <= 1050) {
-                this.mobile = true;
-                this.$store.state.mobile = true;
-            } else {
-                this.mobile = false;
-                this.$store.state.mobile = false;
-
-            }
-            if (window.innerWidth <= 1300) {
-                this.tabletHorizontal = true
-                this.$store.state.tablet = true
-            } else {
-                this.tabletHorizontal = false
-                this.$store.state.tablet = false
-            }
-        }
     },
   components: {
+      FooterComponent,
       Icon,HeaderComponent
   },
 };
@@ -273,12 +379,29 @@ export default {
   height: 100vh;
   padding-top: 30px;
 }
+.background-color-mobile{
+    background-image:linear-gradient(to bottom,  rgba(120, 104, 79, 0.78) 50%, rgba(0, 255, 0, 0.03) 100%);
+    height: 100vh;
+    padding-top: 30px;
+}
 .logo{
   border: white solid 1px;
   border-radius: 100%;
   background-color: white;
   height: 70px;
   width: 70px;
+}
+.tab-card{
+    height: 85vh;
+    background-color: transparent;
+
+}
+.logo-mobile{
+    border: white solid 1px;
+    border-radius: 100%;
+    background-color: white;
+    height: 39px;
+    width: 39px;
 }
 .ueber-mich{
   border-radius: 30px;
@@ -305,6 +428,14 @@ export default {
   background-size: cover;
   border-radius: 70px 70px 70px 200px;
   box-shadow: 4px 4px 15px black;
+}
+.profil-bild-mobile{
+    height: 30vh;
+    width: 100%;
+    background-image: url("https://mpu-institut-saar.de/wp-content/uploads/2022/06/999543c1-1-2048x1367.jpg");
+    background-size: cover;
+    border-radius: 70px 70px 70px 200px;
+    box-shadow: 4px 4px 15px black;
 }
 
 .footer{

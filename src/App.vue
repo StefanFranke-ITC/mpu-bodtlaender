@@ -25,7 +25,6 @@ export default {
             window.addEventListener('resize', this.checkMobileView);
         },
         checkMobileView() {
-            console.log('yes')
             if (window.innerWidth >= 1800) {
                 this.wide = true;
                 this.$store.state.wide = true;

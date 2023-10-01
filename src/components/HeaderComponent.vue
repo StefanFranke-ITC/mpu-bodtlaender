@@ -105,11 +105,35 @@
             </v-dialog>
         </v-col>
     </v-row>
+    <v-row v-if="$store.state.mobile" style="width: 100%;" class="mx-0">
+        <v-col  cols="1" style=" max-width: 90px" class="cursor" @click="$router.push('/')">
+            <v-img @click="$router.push('/')"  class="logo-mobile" src="https://mpu-institut-saar.de/wp-content/uploads/2022/01/cropped-logo-web-transparent.png">
+            </v-img>
+        </v-col>
+        <v-col @click="$router.push('/')" cols="7" class="cursor pl-0 d-flex ">
+            <div>
+                <h4 class="mb-n6">
+                    MPU Vorbereitung
+                </h4>
+                <br >
+                <p style="font-size: 10px" class="text-white">
+                    B. Bodtländer Psychologischer Berater
+                </p>
+            </div>
+        </v-col>
+        <v-col class="d-flex align-center">
+            <Icon style="font-size: 30px; color: rgba(255, 176, 1, 0.7)" icon="solar:map-arrow-right-bold" />
+        </v-col>
+    </v-row>
 </template>
 
 
-<script setup>
+<script >
+import { Icon } from '@iconify/vue';
 
+export default {
+    components:{Icon}
+}
 </script>
 
 <style >
