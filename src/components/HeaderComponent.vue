@@ -18,18 +18,27 @@
             </div>
         </v-col>
         <v-col cols="1" class="d-flex align-center">
-            <h4 class="cursor text-white" @click="$router.push('/mpu')">
+          <h4 v-if="$route.path === '/mpu'" class="cursor " style="color: #C0C080">
+            MPU
+          </h4>
+            <h4 v-else class="cursor text-white" @click="$router.push('/mpu')">
                 MPU
             </h4>
         </v-col>
         <v-col cols="1" class="d-flex align-center">
-            <h4 class="cursor text-white" @click="$router.push('/preise')">
+          <h4 v-if="$route.path === ('/info')" class="cursor " style="color: #C0C080">
+            Info
+          </h4>
+            <h4 v-else class="cursor text-white" @click="$router.push('/info')">
                 Info
             </h4>
         </v-col>
 
         <v-col cols="1" class="d-flex align-center">
-            <h4 class="cursor text-white" @click="$router.push('/impressum')">
+          <h4 v-if="$route.path === ('/impressum')" class="cursor" style="color: #C0C080">
+            Impressum
+          </h4>
+            <h4 v-else class="cursor text-white" @click="$router.push('/impressum')">
                 Impressum
             </h4>
         </v-col>

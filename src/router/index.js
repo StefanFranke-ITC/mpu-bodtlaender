@@ -3,8 +3,8 @@ import HomeView from '../views/HomeView.vue'
 
 import DatenschutzView from "@/views/DatenschutzView";
 import MPUView from "@/views/MPUView";
-import PreiseView from "@/views/InfoView";
 import ImpressumNeuView from "@/views/ImpressumNeuView";
+import InfoView from "@/views/InfoView";
 
 const routes = [
   {
@@ -30,7 +30,7 @@ const routes = [
   {
     path: '/info',
     name: 'info',
-    component: PreiseView
+    component: InfoView
   },
   {
     path: '/:catchAll(.*)', component: HomeView
