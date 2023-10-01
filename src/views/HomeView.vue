@@ -150,18 +150,18 @@
         <HeaderComponent></HeaderComponent>
           <div class="tab-card">
               <v-tabs
-                      class="mt-3"
+
                       center-active
                       v-model="tab"
                       color="rgba(255, 176, 1, 0.7)"
                       align-tabs="center"
               >
-                  <v-tab class=" tab"  :value="0">Home</v-tab>
-                  <v-tab class="tab" :value="1">MPU</v-tab>
-                  <v-tab class="tab" :value="2">Info</v-tab>
-                  <v-tab class="tab" :value="3">Kontakt</v-tab>
-                  <v-tab class="tab" :value="4">Über mich</v-tab>
-                  <v-tab class="tab" :value="5">Impressum</v-tab>
+                  <v-tab class="" :value="0">Home</v-tab>
+                  <v-tab class="" :value="1">MPU</v-tab>
+                  <v-tab class="" :value="2">Info</v-tab>
+                  <v-tab class="" :value="3">Kontakt</v-tab>
+                  <v-tab class="" :value="4">Über mich</v-tab>
+                  <v-tab class="" :value="5">Impressum</v-tab>
 
 
               </v-tabs>
@@ -696,7 +696,6 @@ export default {
     margin-top: -35px;
 }
 .v-tab__slider{
-    bottom: -6px;
     background-image: linear-gradient(to right, rgba(192, 192, 128, 0.70) 20%, rgba(255, 176, 1, 0.70) 100%);
 
 }
