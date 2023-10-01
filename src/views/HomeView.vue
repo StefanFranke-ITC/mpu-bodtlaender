@@ -150,6 +150,7 @@
         <HeaderComponent></HeaderComponent>
           <div class="tab-card">
               <v-tabs
+                      center-active
                       v-model="tab"
                       color="rgba(255, 176, 1, 0.7)"
                       align-tabs="center"
@@ -158,6 +159,8 @@
                   <v-tab :value="2">Info</v-tab>
                   <v-tab :value="3">Kontakt</v-tab>
                   <v-tab :value="4">Über mich</v-tab>
+                  <v-tab :value="5">Impressum</v-tab>
+
 
               </v-tabs>
 
@@ -176,8 +179,8 @@
                                   </h4>
 
                               </v-col>
-                              <v-col cols="10">
-                                  <div class="profil-bild-mobile">
+                              <v-col cols="11">
+                                  <div class="mt-n6 profil-bild-mobile">
                                       <v-dialog width="500">
                                           <template v-slot:activator="{ props }">
                                               <div   v-bind="props" style="position: relative; left: -20%; top: 70%;transform: scale(0.6); max-width: 220px" class="cursor mt-6 d-flex align-center justify-center button-rechts">
@@ -187,7 +190,7 @@
                                               </div>
                                           </template>
                                           <template v-slot:default="{ isActive }">
-                                              <v-card style="transform: scale(0.55)" class=" pt-4 kontaktformular">
+                                              <v-card style="transform: scale(0.8) " class=" pt-4 kontaktformular-mobile">
                                                   <v-row  style="width: 100%" class="d-flex justify-center mx-0">
                                                       <v-col  cols="10">
                                                           <h3>Bitte füllen Sie das Formular aus, und ich werde mich umgehend bei Ihnen melden.</h3>
@@ -246,32 +249,135 @@
                           :value="2"
                   >
                       <v-container>
-                          <v-row   style="width: 100%" class=" d-flex justify-center mx-0">
-                              <v-col cols="10">
-                                  <h4 class="text-white text-center">
-                                      Willkommen beim Institut
-                                      für MPU-Beratung und
-                                      Suchtprävention
-                                      im Saarland.
-                                  </h4>
+                          <!---- input-->
+                      </v-container>
+                  </v-window-item>
+                  <v-window-item
 
-                              </v-col>
-                              <v-col cols="10">
-                                  <div class="profil-bild-mobile">
+                          :value="3"
+                  >
+                      <v-container>
+                          <div class="d-flex justify-center">
+                              <v-card style="overflow: scroll" class="pt-4 kontaktformular-mobile1">
+                                  <v-row  style="width: 100%" class="d-flex justify-center mx-0">
+                                      <v-col  cols="10">
+                                          <h6>Bitte füllen Sie das Formular aus, und ich werde mich umgehend bei Ihnen melden.</h6>
+                                      </v-col>
+                                      <v-col   cols="10">
+                                          <v-text-field density="compact" variant="outlined"  label="Vorname">
 
-                                  </div>
-                              </v-col>
-                              <v-col cols="10">
-                                  <p style="font-size: 14px" class="mt-n3 text-white text-center">
-                                      Ihr Ansprechpartner rund um das Thema Medizinisch-Psychologische Untersuchung (MPU). <br><br>
+                                          </v-text-field>
+                                      </v-col>
+                                      <v-col class="formularinhalte-mobile" cols="10">
+                                          <v-text-field density="compact" variant="outlined"  label="Nachname">
 
-                                      In der MPU-Vorbereitung gehe ich mit Ihnen den gleichen Weg, den der Gutachter mit Ihnen im Gespräch beschreitet.
-                                  </p>
-                              </v-col>
-                          </v-row>
+                                          </v-text-field>
+                                      </v-col>
+                                      <v-col class="formularinhalte-mobile" cols="10">
+                                          <v-text-field density="compact" variant="outlined" label="Email">
+
+                                          </v-text-field>
+                                      </v-col>
+                                      <v-col class="formularinhalte-mobile" cols="10">
+                                          <v-text-field density="compact" variant="outlined"  label="Handynummer">
+
+                                          </v-text-field>
+                                      </v-col>
+                                      <v-col class="formularinhalte-mobile" cols="10">
+                                          <v-textarea density="compact" variant="outlined"  label="Nachricht">
+
+                                          </v-textarea>
+                                      </v-col>
+
+                                  </v-row>
+                                  <v-card-actions class="mt-n6 px-14 mb-6 d-flex justify-space-between">
+                                      <v-btn
+                                              text="Senden"
+
+                                      ></v-btn>
+                                      <v-btn
+                                              text="Abbrechen "
+
+                                      ></v-btn>
+
+                                  </v-card-actions>
+                              </v-card>
+
+                          </div>
+                      </v-container>
+                  </v-window-item>
+                  <v-window-item
+
+                          :value="4"
+                  >
+                      <v-container>
+                          <!---- input-->
+                      </v-container>
+                  </v-window-item>
+                  <v-window-item
+
+                          :value="5"
+                  >
+                      <v-container>
+                          <v-card class="pa-5" style="background-color: transparent; box-shadow: 0px 0px; overflow-y: scroll; max-height: 70vh; color: #e3dede">
+
+                              <div class="pb-8 mx-5">
+                                  <h2>Impressum</h2>
+                                  <p>Name<br/>
+
+                                      Position<git stabr/>
+                                      Straße<br/>
+                                      Wohnort</p>
+                                  <!--        Telefon: <a class="email" href="tel:+491635059366">+49 163 5059366</a> <br>-->
+                                  E-Mail: <a class="email" href="mailto:email.de">email</a> <br><br>
+
+                                  <h2>Website created by</h2>
+                                  <a href="https://franke-arts.de" target="_blank">Stefan Franke</a> <br>
+                                  <a href="https://leandro-graf.de" target="_blank">Leandro Graf</a>
+                                  <br><br>
+
+                                  <h2>Haftung für Inhalte:</h2>
+                                  <p>
+                                      Als Seitenbetreiber bin ich für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich.
+                                      Ich
+                                      bin jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach
+                                      Umständen
+                                      zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der
+                                      Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung
+                                      ist
+                                      jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von
+                                      entsprechenden Rechtsverletzungen werde ich diese Inhalte umgehend entfernen.</p> <br>
+                                  <h2>Haftung für Links:</h2>
+                                  <p>Diese Website enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Deshalb
+                                      kann ich für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist
+                                      stets
+                                      der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt
+                                      der
+                                      Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung
+                                      nicht
+                                      erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte
+                                      einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werde ich derartige Links
+                                      umgehend
+                                      entfernen.</p> <br>
+                                  <h2>Urheberrecht:</h2>
+                                  <p>Die durch mich erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die
+                                      Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des
+                                      Urheberrechtes
+                                      bedürfen meiner schriftlichen Zustimmung. Downloads und Kopien dieser Seite sind nur für den privaten, nicht
+                                      kommerziellen Gebrauch gestattet. Soweit die Inhalte auf dieser Seite nicht von mir erstellt wurden, werden
+                                      die
+                                      Urheberrechte Dritter beachtet. Insbesondere werden Inhalte Dritter als solche gekennzeichnet. Sollten Sie
+                                      trotzdem auf eine Urheberrechtsverletzung aufmerksam werden, bitte ich um einen entsprechenden Hinweis. Bei
+                                      Bekanntwerden von Rechtsverletzungen werde ich derartige Inhalte umgehend entfernen.</p>
+                                  <br>
+                                  <h2>Datenschutz</h2>
+                              </div>
+
+                          </v-card>
 
                       </v-container>
                   </v-window-item>
+
 
               </v-window>
 
@@ -471,7 +577,29 @@ export default {
     border: solid 2px rgba(3, 3, 3, 0.93);
     border-radius: 30px !important;
 }
+.kontaktformular-mobile{
+    height: 600px;
+    width: 350px;
+    background-color: transparent;
+    background-image: linear-gradient(to right, rgba(192, 192, 128, 0.70) 20%, rgba(255, 176, 1, 0.70) 100%);
+    backdrop-filter: blur(4px);
+    border: solid 2px rgba(3, 3, 3, 0.93);
+    border-radius: 30px !important;
+}
+.kontaktformular-mobile1{
+    height: 65vh;
+    width: 90%;
+    background-color: transparent;
+    background-image: linear-gradient(to right, rgba(192, 192, 128, 0.70) 20%, rgba(255, 176, 1, 0.70) 100%);
+    backdrop-filter: blur(4px);
+    border: solid 2px rgba(3, 3, 3, 0.93);
+    border-radius: 30px !important;
+}
+
 .formularinhalte{
     margin-top: -60px;
+}
+.formularinhalte-mobile{
+    margin-top: -35px;
 }
 </style>
