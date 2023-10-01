@@ -3,53 +3,7 @@
   <div class="background">
     <div class="background-color">
       <!---  Header   -->
-        <v-row style="max-width: 100%" class="d-flex justify-center mx-0">
-        <v-col cols="1" style=" max-width: 90px" @click="$router.push('/')">
-          <v-img class=" logo" src="https://mpu-institut-saar.de/wp-content/uploads/2022/01/cropped-logo-web-transparent.png">
-          </v-img>
-        </v-col>
-        <v-col cols="3" class=" pl-0 d-flex align-center">
-          <div>
-            <h2 class="mb-n6">
-            MPU Vorbereitung
-            </h2>
-            <br >
-          <p class="text-white">
-          B. Bodtländer Psychologischer Berater
-        </p>
-          </div>
-        </v-col>
-        <v-col cols="1" class="d-flex align-center">
-          <h4 class="cursor text-white" @click="$router.push('/mpu')">
-            MPU
-          </h4>
-        </v-col>
-        <v-col cols="1" class="d-flex align-center">
-          <h4 class="cursor text-white" @click="$router.push('/preise')">
-            Preise
-          </h4>
-        </v-col>
-
-        <v-col cols="1" class="d-flex align-center">
-          <h4 class="cursor text-white" @click="$router.push('/impressum')">
-            Impressum
-          </h4>
-        </v-col>
-        <v-col cols="2" class="d-flex align-center">
-          <div class="cursor d-flex align-center justify-center ueber-mich">
-            <h3>
-              Über mich
-            </h3>
-          </div>
-        </v-col>
-        <v-col cols="2" class="d-flex align-center">
-          <div class="cursor d-flex align-center justify-center  button-rechts">
-             <h3>
-                 Kontakt
-             </h3>
-          </div>
-        </v-col>
-      </v-row>
+        <HeaderComponent></HeaderComponent>
       <!---  body   -->
         <v-row style="max-width: 100%" class="mt-16 d-flex justify-center mx-0">
         <v-col  cols="5">
@@ -179,15 +133,16 @@
 
 <script>
 import { Icon } from '@iconify/vue';
+import HeaderComponent from "@/components/HeaderComponent.vue";
 export default ({
   name: 'HomeView',
 
   components: {
-      Icon,
+      Icon,HeaderComponent
   },
 });
 </script>
-<style scoped>
+<style >
 .background {
   background-image: url("../assets/Background.png");
   background-size: cover;
