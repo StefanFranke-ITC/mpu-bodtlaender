@@ -253,7 +253,7 @@ export default ({
   },
 });
 </script>
-<style scoped>
+<style >
 .background {
   background-image: url("../assets/Background.png");
   background-size: cover;
@@ -261,8 +261,8 @@ export default ({
   position: fixed;
   width: 100%;
 }
-.background {
-    background-image: url("../assets/Background.png");
+.background-mobile {
+    background-image: url("../assets/background-mobile.jpg");
     background-size: cover;
     height: 100%;
     position: fixed;
