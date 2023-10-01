@@ -25,8 +25,8 @@
           </h4>
         </v-col>
         <v-col cols="1" class="d-flex align-center">
-          <h4 class="cursor text-white" @click="$router.push('/preise')">
-            Preise
+          <h4 class="cursor text-white" @click="$router.push('/info')">
+            Info
           </h4>
         </v-col>
 

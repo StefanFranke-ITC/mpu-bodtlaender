@@ -25,7 +25,7 @@
         </v-col>
         <v-col cols="1" class="d-flex align-center">
           <h4 class="cursor" style="color: #C0C080">
-            Preise
+            Info
           </h4>
         </v-col>
 

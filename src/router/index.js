@@ -3,7 +3,7 @@ import HomeView from '../views/HomeView.vue'
 
 import DatenschutzView from "@/views/DatenschutzView";
 import MPUView from "@/views/MPUView";
-import PreiseView from "@/views/PreiseView";
+import PreiseView from "@/views/InfoView";
 import ImpressumNeuView from "@/views/ImpressumNeuView";
 
 const routes = [
@@ -28,8 +28,8 @@ const routes = [
     component: MPUView
   },
   {
-    path: '/preise',
-    name: 'preise',
+    path: '/info',
+    name: 'info',
     component: PreiseView
   },
   {
