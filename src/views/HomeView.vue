@@ -150,21 +150,103 @@
         <HeaderComponent></HeaderComponent>
           <div class="tab-card">
               <v-tabs
+                      class="mt-3"
                       center-active
                       v-model="tab"
                       color="rgba(255, 176, 1, 0.7)"
                       align-tabs="center"
               >
-                  <v-tab :value="1">MPU</v-tab>
-                  <v-tab :value="2">Info</v-tab>
-                  <v-tab :value="3">Kontakt</v-tab>
-                  <v-tab :value="4">Über mich</v-tab>
-                  <v-tab :value="5">Impressum</v-tab>
+                  <v-tab class=" tab"  :value="0">Home</v-tab>
+                  <v-tab class="tab" :value="1">MPU</v-tab>
+                  <v-tab class="tab" :value="2">Info</v-tab>
+                  <v-tab class="tab" :value="3">Kontakt</v-tab>
+                  <v-tab class="tab" :value="4">Über mich</v-tab>
+                  <v-tab class="tab" :value="5">Impressum</v-tab>
 
 
               </v-tabs>
 
               <v-window v-model="tab">
+                  <v-window-item
+                          :value="0"
+                  >
+                      <v-container>
+                          <v-row   style="width: 100%" class=" d-flex justify-center mx-0">
+                              <v-col cols="10">
+                                  <h4 class="text-white text-center">
+                                      Willkommen beim Institut
+                                      für MPU-Beratung und
+                                      Suchtprävention
+                                      im Saarland.
+                                  </h4>
+
+                              </v-col>
+                              <v-col cols="11">
+                                  <div class="mt-n6 profil-bild-mobile">
+                                      <v-dialog width="500">
+                                          <template v-slot:activator="{ props }">
+                                              <div   v-bind="props" style="position: relative; left: -20%; top: 70%;transform: scale(0.6); max-width: 220px" class="cursor mt-6 d-flex align-center justify-center button-rechts">
+                                                  <h3>
+                                                      Termin Vereinbaren
+                                                  </h3>
+                                              </div>
+                                          </template>
+                                          <template v-slot:default="{ isActive }">
+                                              <v-card style="transform: scale(0.8) " class=" pt-4 kontaktformular-mobile">
+                                                  <v-row  style="width: 100%" class="d-flex justify-center mx-0">
+                                                      <v-col  cols="10">
+                                                          <h3>Bitte füllen Sie das Formular aus, und ich werde mich umgehend bei Ihnen melden.</h3>
+                                                      </v-col>
+                                                      <v-col  cols="10">
+                                                          <v-text-field variant="outlined" type="name" v-model="vorname" label="Vorname">
+
+                                                          </v-text-field>
+                                                      </v-col>
+                                                      <v-col class="formularinhalte" cols="10">
+                                                          <v-text-field variant="outlined" type="name" v-model="nachname" label="Nachname">
+
+                                                          </v-text-field>
+                                                      </v-col>
+                                                      <v-col class="formularinhalte" cols="10">
+                                                          <v-text-field variant="outlined" type="email" v-model="email" label="Email">
+
+                                                          </v-text-field>
+                                                      </v-col>
+                                                      <v-col class="formularinhalte" cols="10">
+                                                          <v-text-field variant="outlined" type="tel" v-model="handynummer" label="Handynummer">
+
+                                                          </v-text-field>
+                                                      </v-col>
+
+                                                  </v-row>
+                                                  <v-card-actions class="px-14 mb-6 d-flex justify-space-between">
+                                                      <v-btn
+                                                              text="Senden"
+                                                              @click="sendAppointmentEmail"
+                                                      ></v-btn>
+                                                      <v-btn
+                                                              text="Abbrechen "
+                                                              @click="isActive.value = false"
+                                                      ></v-btn>
+
+                                                  </v-card-actions>
+                                              </v-card>
+                                          </template>
+                                      </v-dialog>
+                                  </div>
+                              </v-col>
+                              <v-col cols="10">
+                                  <p style="font-size: 14px" class="mt-n3 text-white text-center">
+                                      Ihr Ansprechpartner rund um das Thema Medizinisch-Psychologische Untersuchung (MPU). <br><br>
+
+                                      In der MPU-Vorbereitung gehe ich mit Ihnen den gleichen Weg, den der Gutachter mit Ihnen im Gespräch beschreitet.
+                                  </p>
+                              </v-col>
+                          </v-row>
+
+                      </v-container>
+                  </v-window-item>
+
                   <v-window-item
                           :value="1"
                   >
@@ -401,7 +483,7 @@ export default {
       nachname: '',
       email: '',
       handynummer: '',
-      tab:1,
+      tab:0,
     }
   },
     created() {
@@ -527,6 +609,17 @@ export default {
   box-shadow: 4px 4px 7px black;
 
 }
+.tab{
+    border-radius: 30px !important;
+    border: 1px solid black !important;
+    height: 30px !important;
+    margin-right: 5px;
+    background-image: linear-gradient(to right, rgba(192, 192, 128, 0.66) 20%, rgba(255, 176, 1, 0.7) 100%);
+    backdrop-filter: blur(4px);
+    box-shadow: 4px 4px 7px black;
+
+}
+
 .profil-bild{
   height: 40vh;
   width: 100%;
@@ -601,5 +694,8 @@ export default {
 }
 .formularinhalte-mobile{
     margin-top: -35px;
+}
+.v-tab__slider{
+    bottom: -6px;
 }
 </style>

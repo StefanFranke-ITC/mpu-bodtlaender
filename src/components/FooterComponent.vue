@@ -1,11 +1,30 @@
 <template>
     <div class="footer-mobile">
+        <v-row style="height: 100%; width: 100%" class=" ma-0">
+            <v-col class="d-flex justify-center align-center pa-0">
+                <Icon style="font-size: 20px"  icon="line-md:email" />
+            </v-col>
+            <v-divider class="border-opacity-100" :vertical="true"></v-divider>
+            <v-col class="d-flex justify-center align-center pa-0">
+                <Icon  style="font-size: 20px" icon="streamline:phone-telephone-android-phone-mobile-device-smartphone-iphone" />
 
+            </v-col>
+            <v-divider class="border-opacity-100" :vertical="true"></v-divider>
+            <v-col class="d-flex justify-center align-center pa-0">
+                <Icon  style="font-size: 20px" icon="tdesign:location" />
+            </v-col>
+        </v-row>
     </div>
 </template>
 
-<script setup>
+<script>
+import { Icon } from '@iconify/vue';
 
+export default{
+    components:{
+        Icon
+    }
+}
 </script>
 
 <style scoped>
