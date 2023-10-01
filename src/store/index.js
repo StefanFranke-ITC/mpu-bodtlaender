@@ -7,7 +7,6 @@ export default createStore({
     mobile:false,
     tablet:false,
     tabletHorizontal: false,
-    email: 'franke@itc-dortmund.de'
   },
   getters: {
   },

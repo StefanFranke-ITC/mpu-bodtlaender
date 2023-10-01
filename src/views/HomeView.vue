@@ -40,22 +40,22 @@
                                     <h3>Bitte füllen Sie das Formular aus, und ich werde mich umgehend bei Ihnen melden.</h3>
                                 </v-col>
                                 <v-col  cols="10">
-                                    <v-text-field variant="outlined" type="name" label="Vorname">
+                                    <v-text-field variant="outlined" type="name" v-model="vorname" label="Vorname">
 
                                     </v-text-field>
                                 </v-col>
                                 <v-col class="formularinhalte" cols="10">
-                                    <v-text-field variant="outlined" type="name" label="Nachname">
+                                    <v-text-field variant="outlined" type="name" v-model="nachname" label="Nachname">
 
                                     </v-text-field>
                                 </v-col>
                                 <v-col class="formularinhalte" cols="10">
-                                    <v-text-field variant="outlined" type="email" label="Email">
+                                    <v-text-field variant="outlined" type="email" v-model="email" label="Email">
 
                                     </v-text-field>
                                 </v-col>
                                 <v-col class="formularinhalte" cols="10">
-                                    <v-text-field variant="outlined" type="tel" label="Handynummer">
+                                    <v-text-field variant="outlined" type="tel" v-model="handynummer" label="Handynummer">
 
                                     </v-text-field>
                                 </v-col>
@@ -64,7 +64,7 @@
                             <v-card-actions class="px-14 mb-6 d-flex justify-space-between">
                                 <v-btn
                                         text="Senden"
-                                        @click="isActive.value = false"
+                                        @click="sendAppointmentEmail"
                                 ></v-btn>
                                 <v-btn
                                         text="Abbrechen "
@@ -154,7 +154,7 @@
 import { Icon } from '@iconify/vue';
 import HeaderComponent from "@/components/HeaderComponent.vue";
 import axios from "axios";
-export default ({
+export default {
   name: 'HomeView',
   data() {
     return {
@@ -251,7 +251,7 @@ export default ({
   components: {
       Icon,HeaderComponent
   },
-});
+};
 </script>
 <style >
 .background {
