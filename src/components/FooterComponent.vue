@@ -2,16 +2,21 @@
     <div class="footer-mobile">
         <v-row style="height: 100%; width: 100%" class=" ma-0">
             <v-col class="d-flex justify-center align-center pa-0">
+                <a class="mt-1 text-black" target="_blank" href="mailto:info@example.com">
                 <Icon style="font-size: 20px"  icon="line-md:email" />
+                </a>
             </v-col>
             <v-divider class="border-opacity-100" :vertical="true"></v-divider>
             <v-col class="d-flex justify-center align-center pa-0">
-                <Icon  style="font-size: 20px" icon="streamline:phone-telephone-android-phone-mobile-device-smartphone-iphone" />
-
+                <a class="mt-1 text-black" target="_blank" href="tel:+4915121225525">
+                    <Icon  style="font-size: 20px" icon="streamline:phone-telephone-android-phone-mobile-device-smartphone-iphone" />
+                </a>
             </v-col>
             <v-divider class="border-opacity-100" :vertical="true"></v-divider>
             <v-col class="d-flex justify-center align-center pa-0">
-                <Icon  style="font-size: 20px" icon="tdesign:location" />
+                <a class="mt-1 text-black" target="_blank" href="https://www.google.com/maps/place/Institut+f%C3%BCr+MPU-Beratung+und+Suchtpr%C3%A4vention+St.Wendel+Saar/@49.4682475,7.1737616,17z/data=!3m1!5s0x4795c0274e5a43e3:0xd195be627346ce6b!4m15!1m8!3m7!1s0x4795c02751fedd21:0xa98259caf324f91d!2sAlter+Woog+13,+66606+St.+Wendel!3b1!8m2!3d49.4682475!4d7.1737616!16s%2Fg%2F11c25gpd9k!3m5!1s0x6f4b9a15b5480a27:0x7e39569ecef92420!8m2!3d49.4682475!4d7.1737616!16s%2Fg%2F11pvcv2d88?entry=ttu">
+                    <Icon  style="font-size: 20px" icon="tdesign:location" />
+                </a>
             </v-col>
         </v-row>
     </div>
