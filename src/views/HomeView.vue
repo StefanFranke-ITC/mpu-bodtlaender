@@ -3,9 +3,8 @@
   <div class="background">
     <div class="background-color">
       <!---  Header   -->
-<<<<<<< HEAD
         <HeaderComponent></HeaderComponent>
-=======
+
         <v-row style="max-width: 100%" class="d-flex justify-center mx-0">
         <v-col cols="1" style=" max-width: 90px" @click="$router.push('/')">
           <v-img class=" logo" src="https://mpu-institut-saar.de/wp-content/uploads/2022/01/cropped-logo-web-transparent.png">
