@@ -6,6 +6,7 @@ export default createStore({
     mobile:false,
     tablet:false,
     tabletHorizontal: false,
+    email: "lelegraf1503@gmail.com"
   },
   getters: {
   },
