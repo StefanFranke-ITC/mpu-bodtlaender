@@ -1,10 +1,10 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 
-import DatenschutzView from "@/views/DatenschutzView";
 import MPUView from "@/views/MPUView";
-import ImpressumNeuView from "@/views/ImpressumNeuView";
+import ImpressumNeuView from "@/views/ImpressumView";
 import InfoView from "@/views/InfoView";
+import DatenschutzView from "@/views/DatenschutzView";
 
 const routes = [
   {

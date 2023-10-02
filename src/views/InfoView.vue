@@ -32,7 +32,7 @@ export default {
 }
 
 
-<<<<<<< HEAD
+
 
 .kontaktformular{
   height: 700px;
@@ -43,13 +43,12 @@ export default {
   border: solid 2px rgba(3, 3, 3, 0.93);
   border-radius: 30px !important;
 }
-=======
+
 .cursor:hover{
   cursor: pointer;
   color: #C0C080 !important;
 }
 
->>>>>>> 4fbb561573616b8c3a67668e5db46da90ded2ea7
 .formularinhalte{
   margin-top: -60px;
 }
