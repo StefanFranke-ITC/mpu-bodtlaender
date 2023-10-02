@@ -5,6 +5,7 @@ import { loadFonts } from './plugins/webfontloader'
 import router from './router'
 import store from './store'
 import './axios'
+import './registerServiceWorker'
 
 loadFonts()
 
