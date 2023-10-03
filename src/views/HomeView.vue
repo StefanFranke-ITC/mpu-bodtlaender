@@ -789,7 +789,7 @@ export default {
 }
 
 .background-mobile {
-  background-image: url("../assets/background-mobile.jpg");
+  background-image: url("../assets/background-mobile.png");
   background-size: cover;
   height: 100%;
   position: fixed;
