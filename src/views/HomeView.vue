@@ -110,7 +110,7 @@
                     </h4>
                   </div>
                 </v-col>
-                <v-divider class="border-opacity-100" vertical="true"></v-divider>
+                <v-divider class="border-opacity-100" :vertical="true"></v-divider>
                 <v-col class="d-flex align-center">
                   <Icon class="ml-5" icon="line-md:email" style="font-size: 40px"/>
                   <div class="text-center" style=" width: 100%">
@@ -128,7 +128,7 @@
 
                   </div>
                 </v-col>
-                <v-divider class="border-opacity-100" vertical="true"></v-divider>
+                <v-divider class="border-opacity-100" :vertical="true"></v-divider>
                 <v-col class="d-flex align-center">
                   <Icon class="ml-5" icon="tdesign:location" style="font-size: 40px"/>
                   <div class="text-center" style=" width: 100%">
