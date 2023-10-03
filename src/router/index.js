@@ -4,7 +4,6 @@ import HomeView from '../views/HomeView.vue'
 import MPUView from "@/views/MPUView";
 import ImpressumNeuView from "@/views/ImpressumView";
 import InfoView from "@/views/InfoView";
-import DatenschutzView from "@/views/DatenschutzView";
 import ÜberMichView from "@/views/ÜberMichView";
 
 const routes = [
@@ -17,11 +16,6 @@ const routes = [
         path: '/impressum',
         name: 'impressum',
         component: ImpressumNeuView
-    },
-    {
-        path: '/datenschutz',
-        name: 'datenschutz',
-        component: DatenschutzView
     },
     {
         path: '/mpu',

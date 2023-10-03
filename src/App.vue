@@ -18,6 +18,18 @@ export default {
     return {}
 
   },
+  computed: {
+    isMobile() {
+      return this.$store.state.mobile; // Annahme: Deine Store-Variable für Mobile
+    }
+  },
+  watch: {
+    isMobile(newValue) {
+      if (newValue) {
+        this.$router.push('/');
+      }
+    }
+  },
   methods: {
     resize() {
       window.addEventListener('resize', this.checkMobileView);

@@ -24,6 +24,17 @@
                     vorbereitet und selbstbewusst fühlen, wenn Sie den Gutachter treffen.
                   </v-card-text>
                   <v-card-title>
+                    Individuelle Anpassung
+                  </v-card-title>
+                  <v-card-text>
+                    Die Standard-MPU-Vorbereitung <b> umfasst in der Regel elf Stunden und kann als Paket für 750 Euro
+                    gebucht
+                    werden. </b> Jeder Mensch ist einzigartig, und daher kann es sinnvoll sein, den Umfang der
+                    Vorbereitung
+                    individuell anzupassen. Bei Bedarf können <b> zusätzliche Stunden à 75 Euro hinzugebucht
+                    werden. </b>
+                  </v-card-text>
+                  <v-card-title>
                     Gemeinsame Arbeit an Ihren Verstößen
                   </v-card-title>
                   <v-card-text>
@@ -52,15 +63,6 @@
                     Wir nehmen uns ausreichend Zeit, um den "Ernstfall" zu proben, indem wir das Gespräch mit dem
                     Gutachter mehrmals durchgehen. Dies hilft dabei, mögliche Fallstricke frühzeitig zu erkennen und zu
                     überwinden. Ihr Erfolg bei der MPU ist unser gemeinsames Ziel.
-                  </v-card-text>
-                  <v-card-title>
-                    Individuelle Anpassung
-                  </v-card-title>
-                  <v-card-text>
-                    Die Standard-MPU-Vorbereitung umfasst in der Regel elf Stunden und kann als Paket für 750 Euro
-                    gebucht
-                    werden. Jeder Mensch ist einzigartig, und daher kann es sinnvoll sein, den Umfang der Vorbereitung
-                    individuell anzupassen. Bei Bedarf können zusätzliche Stunden à 75 Euro hinzugebucht werden.
                   </v-card-text>
                   <v-card-title>
                     Hausbesuche und Anfahrtsgebühren

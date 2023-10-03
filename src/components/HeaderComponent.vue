@@ -65,36 +65,26 @@
                 <h3>Bitte füllen Sie das Formular aus, und ich werde mich umgehend bei Ihnen melden.</h3>
               </v-col>
               <v-col cols="10">
-                <v-text-field label="Vorname" variant="outlined">
-
-                </v-text-field>
+                <v-text-field v-model="vorname" label="Vorname" variant="outlined"/>
               </v-col>
               <v-col class="formularinhalte" cols="10">
-                <v-text-field label="Nachname" variant="outlined">
-
-                </v-text-field>
+                <v-text-field v-model="nachname" label="Nachname" variant="outlined"/>
               </v-col>
               <v-col class="formularinhalte" cols="10">
-                <v-text-field label="Email" variant="outlined">
-
-                </v-text-field>
+                <v-text-field v-model="email" label="Email" variant="outlined"/>
               </v-col>
               <v-col class="formularinhalte" cols="10">
-                <v-text-field label="Handynummer" variant="outlined">
-
-                </v-text-field>
+                <v-text-field v-model="handynummer" label="Handynummer" variant="outlined"/>
               </v-col>
               <v-col class="formularinhalte" cols="10">
-                <v-textarea label="Nachricht" variant="outlined">
-
-                </v-textarea>
+                <v-textarea v-model="nachricht" label="Nachricht" variant="outlined"/>
               </v-col>
 
             </v-row>
             <v-card-actions class="px-14 mb-6 d-flex justify-space-between">
               <v-btn
                   text="Senden"
-                  @click="isActive.value = false"
+                  @click="sendEmail"
               ></v-btn>
               <v-btn
                   text="Abbrechen "
@@ -134,9 +124,73 @@
 
 <script>
 import {Icon} from '@iconify/vue';
+import axios from "axios";
 
 export default {
-  components: {Icon}
+  components: {Icon},
+  data() {
+    return {
+      vorname: '',
+      nachname: '',
+      email: '',
+      handynummer: '',
+      nachricht: ''
+    }
+  },
+  methods: {
+    async sendEmail() {
+      try {
+        const response = await axios.post('/sendMailAsHTML', {
+              "to": this.$store.state.email,
+              "subject": this.vorname + " " + this.nachname + " möchte kontakt mit dir aufnehmen.",
+              "htmlText": "<div><h3>Hallo Benjamin,</h3><p>" + this.vorname + " " + this.nachname + " möchte kontakt mit dir aufnehmen. Im Folgenden siehst du seine eingetragenen Daten und die dazugehörige Nachricht:</p><p>Vorname: " + this.vorname + "<br>Nachname: " + this.nachname + "<br>Telefonnummer: <a href=\"tel:" + this.handynummer + "\">" + this.handynummer + "</a><br>Email: <a href=\"mailto:" + this.email + "\">" + this.email + "</a><br>Nachricht: <br> <br> " + this.nachricht + "</p><br><p>Mit freundlichen Grüßen<br>Dein FastGlobeIT-Team</p><i>Diese E-Mail wurde automatisch erzeugt.</i></div>"
+            }
+        )
+        console.log(response)
+        try {
+          const response = await axios.post('/sendMailAsHTML', {
+                "to": this.email,
+                "subject": "Sie haben eine Kontaktanfrage geschickt",
+                "htmlText": `
+    <div>
+      <h3>
+        Hallo ` + this.vorname + ` ` + this.nachname + `
+      </h3>
+      <p>
+        Sie haben eine Kontaktanfrage an Benjamin Bodtländer verschickt. Es wird sich, so schnell wie möglich, bei Ihnen melden.
+      </p>
+      <p>
+        Falls weitere Probleme oder Fragen entstehen, bitten wir Sie, das Kontaktformular auf
+        <a href="https://mpu-institut-saar.de/">www.mpu-institut-saar.de</a> auszufüllen
+        und diese konkret zu schildern.
+      </p>
+
+      <br>
+      <p>
+        Mit freundlichen Grüßen
+        <br>
+        <a href="https://fastglobeit.de"> Ihr FastGlobeIT-Team</a>
+      </p>
+      <i>Diese E-Mail wurde automatisch erzeugt.</i>
+    </div>
+  `
+              }
+          )
+          console.log(response)
+        } catch (e) {
+          console.log(e)
+        }
+
+        this.vorname = 'Vielen Dank für Ihre Anfrage.'
+        this.nachname = 'Benjamin Bodtländer wurde benachrichtigt.'
+        this.email = ''
+        this.handynummer = ''
+        this.nachricht = ''
+      } catch (e) {
+        console.log(e)
+      }
+    }
+  }
 }
 </script>
 
