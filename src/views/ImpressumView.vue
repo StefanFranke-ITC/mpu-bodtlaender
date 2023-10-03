@@ -300,7 +300,7 @@ a {
 .profil-bild1 {
   height: 40vh;
   width: 100%;
-  background-image: url("https://atm-deutschland.com/wp-content/uploads/2020/03/imressum.jpg");
+  background-image: url("/src/assets/impressum.jpg");
   background-size: cover;
   border-radius: 70px 70px 70px 200px;
   box-shadow: 4px 4px 15px black;

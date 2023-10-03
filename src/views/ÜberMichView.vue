@@ -59,7 +59,7 @@ export default {
 .profil-bild1 {
   height: 40vh;
   width: 100%;
-  background-image: url("https://mpu-institut-saar.de/wp-content/uploads/2022/06/999543c1-1-2048x1367.jpg");
+  background-image: url("/src/assets/Bodtländer.jpg");
   background-size: cover;
   border-radius: 70px 70px 70px 200px;
   box-shadow: 4px 4px 15px black;

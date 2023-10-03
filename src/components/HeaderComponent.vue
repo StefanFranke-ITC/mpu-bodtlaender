@@ -1,8 +1,8 @@
 <template>
   <v-row v-if="!$store.state.mobile" class="d-flex justify-center mx-0" style="max-width: 100%">
     <v-col class="cursor" cols="1" style=" max-width: 90px" @click="$router.push('/')">
-      <v-img class=" logo"
-             src="https://mpu-institut-saar.de/wp-content/uploads/2022/01/cropped-logo-web-transparent.png"
+      <v-img :src="img"
+             class=" logo"
              @click="$router.push('/')">
       </v-img>
     </v-col>
@@ -99,8 +99,8 @@
   </v-row>
   <v-row v-if="$store.state.mobile" class="mx-0" style="width: 100%;">
     <v-col class="cursor" cols="1" style=" max-width: 90px" @click="$router.push('/')">
-      <v-img class="logo-mobile"
-             src="https://mpu-institut-saar.de/wp-content/uploads/2022/01/cropped-logo-web-transparent.png"
+      <v-img :src="img"
+             class="logo-mobile"
              @click="$router.push('/')">
       </v-img>
     </v-col>
@@ -134,7 +134,8 @@ export default {
       nachname: '',
       email: '',
       handynummer: '',
-      nachricht: ''
+      nachricht: '',
+      img: require("/src/assets/Logo.png")
     }
   },
   methods: {

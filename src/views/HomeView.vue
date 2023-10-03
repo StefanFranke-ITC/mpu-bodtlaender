@@ -110,7 +110,7 @@
                     </h4>
                   </div>
                 </v-col>
-                <v-divider class="border-opacity-100" :vertical="true"></v-divider>
+                <v-divider :vertical="true" class="border-opacity-100"></v-divider>
                 <v-col class="d-flex align-center">
                   <Icon class="ml-5" icon="line-md:email" style="font-size: 40px"/>
                   <div class="text-center" style=" width: 100%">
@@ -128,7 +128,7 @@
 
                   </div>
                 </v-col>
-                <v-divider class="border-opacity-100" :vertical="true"></v-divider>
+                <v-divider :vertical="true" class="border-opacity-100"></v-divider>
                 <v-col class="d-flex align-center">
                   <Icon class="ml-5" icon="tdesign:location" style="font-size: 40px"/>
                   <div class="text-center" style=" width: 100%">
@@ -839,7 +839,7 @@ export default {
 .profil-bild {
   height: 40vh;
   width: 100%;
-  background-image: url("https://mpu-institut-saar.de/wp-content/uploads/2022/06/999543c1-1-2048x1367.jpg");
+  background-image: url("/src/assets/Bodtländer.jpg");
   background-size: cover;
   border-radius: 70px 70px 70px 200px;
   box-shadow: 4px 4px 15px black;
@@ -848,7 +848,7 @@ export default {
 .profil-bild-tablet {
   height: 50vh;
   width: 100%;
-  background-image: url("https://mpu-institut-saar.de/wp-content/uploads/2022/06/999543c1-1-2048x1367.jpg");
+  background-image: url("/src/assets/Bodtländer.jpg");
   background-size: cover;
   border-radius: 70px 70px 70px 200px;
   box-shadow: 4px 4px 15px black;
@@ -857,7 +857,7 @@ export default {
 .profil-bild-mobile {
   height: 30vh;
   width: 100%;
-  background-image: url("https://mpu-institut-saar.de/wp-content/uploads/2022/06/999543c1-1-2048x1367.jpg");
+  background-image: url("/src/assets/Bodtländer.jpg");
   background-size: cover;
   border-radius: 70px 70px 70px 200px;
   box-shadow: 4px 4px 15px black;
