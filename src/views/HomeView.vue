@@ -164,6 +164,7 @@
     <div class="background-color-mobile">
       <HeaderComponent></HeaderComponent>
       <div class="tab-card">
+
         <v-tabs
             v-model="tab"
             align-tabs="center"
@@ -195,11 +196,11 @@
 
                 </v-col>
                 <v-col cols="11">
-                  <div class="mt-n6 profil-bild-mobile">
+                  <div :class="$store.state.tablet? 'profil-bild-tablet':'profil-bild-mobile' " class="mt-n6">
                     <v-dialog width="500">
                       <template v-slot:activator="{ props }">
-                        <div class="cursor mt-6 d-flex align-center justify-center button-rechts"
-                             style="position: relative; left: -20%; top: 70%;transform: scale(0.6); max-width: 220px"
+                        <div :class="$store.state.tablet ? 'termin-tablet': 'termin'" class="cursor termin mt-6 d-flex align-center justify-center button-rechts"
+                             style=""
                              v-bind="props">
                           <h3>
                             Termin Vereinbaren
@@ -334,6 +335,17 @@
                       Medizinisch-Psychologische Untersuchung (MPU) vorzubereiten. Ich möchte, dass Sie sich optimal
                       vorbereitet und selbstbewusst fühlen, wenn Sie den Gutachter treffen.
                     </v-card-text>
+                      <v-card-title>
+                         Preis u. Individuelle <br> Anpassung
+                      </v-card-title>
+                      <v-card-text>
+                          Die Standard-MPU-Vorbereitung umfasst in der Regel elf Stunden und kann als Paket für <b>
+                          750 Euro
+                      </b>
+                          gebucht
+                          werden. Jeder Mensch ist einzigartig, und daher kann es sinnvoll sein, den Umfang der Vorbereitung
+                          individuell anzupassen. Bei Bedarf können zusätzliche Stunden à 75 Euro hinzugebucht werden.
+                      </v-card-text>
                     <v-card-title>
                       Gemeinsame Arbeit <br> an Ihren Verstößen
                     </v-card-title>
@@ -365,15 +377,6 @@
                       Gutachter mehrmals durchgehen. Dies hilft dabei, mögliche Fallstricke frühzeitig zu erkennen und
                       zu
                       überwinden. Ihr Erfolg bei der MPU ist unser gemeinsames Ziel.
-                    </v-card-text>
-                    <v-card-title>
-                      Individuelle Anpassung
-                    </v-card-title>
-                    <v-card-text>
-                      Die Standard-MPU-Vorbereitung umfasst in der Regel elf Stunden und kann als Paket für 750 Euro
-                      gebucht
-                      werden. Jeder Mensch ist einzigartig, und daher kann es sinnvoll sein, den Umfang der Vorbereitung
-                      individuell anzupassen. Bei Bedarf können zusätzliche Stunden à 75 Euro hinzugebucht werden.
                     </v-card-text>
                     <v-card-title>
                       Hausbesuche und <br> Anfahrtsgebühren
@@ -634,6 +637,7 @@
       <FooterComponent></FooterComponent>
     </div>
   </div>
+
 </template>
 
 <script>
@@ -835,6 +839,14 @@ export default {
   border-radius: 70px 70px 70px 200px;
   box-shadow: 4px 4px 15px black;
 }
+.profil-bild-tablet {
+    height: 50vh;
+    width: 100%;
+    background-image: url("https://mpu-institut-saar.de/wp-content/uploads/2022/06/999543c1-1-2048x1367.jpg");
+    background-size: cover;
+    border-radius: 70px 70px 70px 200px;
+    box-shadow: 4px 4px 15px black;
+}
 
 .profil-bild-mobile {
   height: 30vh;
@@ -929,5 +941,19 @@ p {
 
 a {
   font-size: 13px;
+}
+.termin{
+    position: relative;
+    left: -20%;
+    top: 70%;
+    transform: scale(0.6);
+    max-width: 220px
+}
+.termin{
+    position: relative;
+    left: -10%;
+    top: 80%;
+    transform: scale(0.9);
+    max-width: 220px
 }
 </style>

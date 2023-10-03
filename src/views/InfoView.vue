@@ -27,7 +27,8 @@
                     Individuelle Anpassung
                   </v-card-title>
                   <v-card-text>
-                    Die Standard-MPU-Vorbereitung <b> umfasst in der Regel elf Stunden und kann als Paket für 750 Euro
+                    Die Standard-MPU-Vorbereitung <b> umfasst in der Regel elf Stunden und kann als Paket für
+                      750 Euro
                     gebucht
                     werden. </b> Jeder Mensch ist einzigartig, und daher kann es sinnvoll sein, den Umfang der
                     Vorbereitung
