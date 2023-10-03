@@ -158,7 +158,9 @@
     </div>
   </div>
 
-  <!--  mobile-->
+
+    <!--mobile-->
+
 
   <div v-if="$store.state.mobile" class="background-mobile">
     <div class="background-color-mobile">
@@ -208,7 +210,7 @@
                         </div>
                       </template>
                       <template v-slot:default="{ isActive }">
-                        <v-card class=" pt-4 kontaktformular-mobile" style="transform: scale(0.8) ">
+                        <v-card :class="$store.state.tablet ? 'kontaktformular-tablet':'kontaktformular-mobile'" class=" pt-4 " >
                           <v-row class="d-flex justify-center mx-0" style="width: 100%">
                             <v-col cols="10">
                               <h3>Bitte füllen Sie das Formular aus, und ich werde mich umgehend bei Ihnen
@@ -638,6 +640,7 @@
     </div>
   </div>
 
+
 </template>
 
 <script>
@@ -902,8 +905,18 @@ export default {
   backdrop-filter: blur(4px);
   border: solid 2px rgba(3, 3, 3, 0.93);
   border-radius: 30px !important;
+    transform: scale(0.8)
 }
-
+.kontaktformular-tablet {
+    height: 600px;
+    width: 350px;
+    background-color: transparent;
+    background-image: linear-gradient(to right, rgba(192, 192, 128, 0.70) 20%, rgba(255, 176, 1, 0.70) 100%);
+    backdrop-filter: blur(4px);
+    border: solid 2px rgba(3, 3, 3, 0.93);
+    border-radius: 30px !important;
+    transform: scale(1.3)
+}
 .kontaktformular-mobile1 {
   height: 65vh;
   width: 90%;
