@@ -159,7 +159,7 @@
   </div>
 
 
-    <!--mobile-->
+  <!--mobile-->
 
 
   <div v-if="$store.state.mobile" class="background-mobile">
@@ -201,7 +201,8 @@
                   <div :class="$store.state.tablet? 'profil-bild-tablet':'profil-bild-mobile' " class="mt-n6">
                     <v-dialog width="500">
                       <template v-slot:activator="{ props }">
-                        <div :class="$store.state.tablet ? 'termin-tablet': 'termin'" class="cursor termin mt-6 d-flex align-center justify-center button-rechts"
+                        <div :class="$store.state.tablet ? 'termin-tablet': 'termin'"
+                             class="cursor termin mt-6 d-flex align-center justify-center button-rechts"
                              style=""
                              v-bind="props">
                           <h3>
@@ -210,7 +211,8 @@
                         </div>
                       </template>
                       <template v-slot:default="{ isActive }">
-                        <v-card :class="$store.state.tablet ? 'kontaktformular-tablet':'kontaktformular-mobile'" class=" pt-4 " >
+                        <v-card :class="$store.state.tablet ? 'kontaktformular-tablet':'kontaktformular-mobile'"
+                                class=" pt-4 ">
                           <v-row class="d-flex justify-center mx-0" style="width: 100%">
                             <v-col cols="10">
                               <h3>Bitte füllen Sie das Formular aus, und ich werde mich umgehend bei Ihnen
@@ -337,17 +339,17 @@
                       Medizinisch-Psychologische Untersuchung (MPU) vorzubereiten. Ich möchte, dass Sie sich optimal
                       vorbereitet und selbstbewusst fühlen, wenn Sie den Gutachter treffen.
                     </v-card-text>
-                      <v-card-title>
-                         Preis u. Individuelle <br> Anpassung
-                      </v-card-title>
-                      <v-card-text>
-                          Die Standard-MPU-Vorbereitung umfasst in der Regel elf Stunden und kann als Paket für <b>
-                          750 Euro
-                      </b>
-                          gebucht
-                          werden. Jeder Mensch ist einzigartig, und daher kann es sinnvoll sein, den Umfang der Vorbereitung
-                          individuell anzupassen. Bei Bedarf können zusätzliche Stunden à 75 Euro hinzugebucht werden.
-                      </v-card-text>
+                    <v-card-title>
+                      Preis u. Individuelle <br> Anpassung
+                    </v-card-title>
+                    <v-card-text>
+                      Die Standard-MPU-Vorbereitung umfasst in der Regel elf Stunden und kann als Paket für <b>
+                      750 Euro
+                    </b>
+                      gebucht
+                      werden. Jeder Mensch ist einzigartig, und daher kann es sinnvoll sein, den Umfang der Vorbereitung
+                      individuell anzupassen. Bei Bedarf können zusätzliche Stunden à 75 Euro hinzugebucht werden.
+                    </v-card-text>
                     <v-card-title>
                       Gemeinsame Arbeit <br> an Ihren Verstößen
                     </v-card-title>
@@ -456,7 +458,7 @@
                             <div class="inside-article">
 
                               <header aria-label="Inhalt" class="entry-header">
-                                <h1 class="entry-title" itemprop="headline">Impressum</h1></header>
+                                <h1 class="entry-title text-black" itemprop="headline">Impressum</h1></header>
 
 
                               <div class="entry-content" itemprop="text">
@@ -487,7 +489,7 @@
                                 <p style="font-size:25px"><strong>Datenschutzerklärung</strong></p>
 
 
-                                <h4 class="wp-block-heading">Zugriffsdaten</h4>
+                                <h4 class="wp-block-heading text-black">Zugriffsdaten</h4>
 
 
                                 <p>Wir, der Websitebetreiber bzw. Seitenprovider, erheben aufgrund unseres berechtigten
@@ -526,7 +528,7 @@
                                   von der Löschung ausgenommen bis der Vorfall endgültig geklärt ist.</p>
 
 
-                                <h4 class="wp-block-heading">Reichweitenmessung &amp; Cookies</h4>
+                                <h4 class="wp-block-heading text-black">Reichweitenmessung &amp; Cookies</h4>
 
 
                                 <h4 class="wp-block-heading">&nbsp;</h4>
@@ -658,7 +660,7 @@ export default {
       email: '',
       handynummer: '',
       nachricht: '',
-      tab: 0,
+      tab: 5,
     }
   },
   created() {
@@ -842,13 +844,14 @@ export default {
   border-radius: 70px 70px 70px 200px;
   box-shadow: 4px 4px 15px black;
 }
+
 .profil-bild-tablet {
-    height: 50vh;
-    width: 100%;
-    background-image: url("https://mpu-institut-saar.de/wp-content/uploads/2022/06/999543c1-1-2048x1367.jpg");
-    background-size: cover;
-    border-radius: 70px 70px 70px 200px;
-    box-shadow: 4px 4px 15px black;
+  height: 50vh;
+  width: 100%;
+  background-image: url("https://mpu-institut-saar.de/wp-content/uploads/2022/06/999543c1-1-2048x1367.jpg");
+  background-size: cover;
+  border-radius: 70px 70px 70px 200px;
+  box-shadow: 4px 4px 15px black;
 }
 
 .profil-bild-mobile {
@@ -905,18 +908,20 @@ export default {
   backdrop-filter: blur(4px);
   border: solid 2px rgba(3, 3, 3, 0.93);
   border-radius: 30px !important;
-    transform: scale(0.8)
+  transform: scale(0.8)
 }
+
 .kontaktformular-tablet {
-    height: 600px;
-    width: 350px;
-    background-color: transparent;
-    background-image: linear-gradient(to right, rgba(192, 192, 128, 0.70) 20%, rgba(255, 176, 1, 0.70) 100%);
-    backdrop-filter: blur(4px);
-    border: solid 2px rgba(3, 3, 3, 0.93);
-    border-radius: 30px !important;
-    transform: scale(1.3)
+  height: 600px;
+  width: 350px;
+  background-color: transparent;
+  background-image: linear-gradient(to right, rgba(192, 192, 128, 0.70) 20%, rgba(255, 176, 1, 0.70) 100%);
+  backdrop-filter: blur(4px);
+  border: solid 2px rgba(3, 3, 3, 0.93);
+  border-radius: 30px !important;
+  transform: scale(1.3)
 }
+
 .kontaktformular-mobile1 {
   height: 65vh;
   width: 90%;
@@ -950,23 +955,31 @@ export default {
 
 p {
   font-size: 13px;
+  color: black;
 }
 
 a {
   font-size: 13px;
 }
-.termin{
-    position: relative;
-    left: -20%;
-    top: 70%;
-    transform: scale(0.6);
-    max-width: 220px
+
+.termin {
+  position: relative;
+  left: -20%;
+  top: 70%;
+  transform: scale(0.6);
+  max-width: 220px
 }
-.termin-tablet{
-    position: relative;
-    left: -10%;
-    top: 80%;
-    transform: scale(0.9);
-    max-width: 220px
+
+.termin-tablet {
+  position: relative;
+  left: -10%;
+  top: 80%;
+  transform: scale(0.9);
+  max-width: 220px
+}
+
+li {
+  font-size: 13px;
+  color: black;
 }
 </style>

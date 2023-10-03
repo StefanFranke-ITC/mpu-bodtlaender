@@ -1,6 +1,6 @@
 <template>
   <v-app>
-    <v-main>
+    <v-main id="home">
       <router-view/>
     </v-main>
   </v-app>
@@ -51,14 +51,14 @@ export default {
         this.$store.state.mobile = false;
 
       }
-        if (window.innerWidth <= 1000 && window.innerWidth >= 750 ) {
-            this.tablet = true;
-            this.$store.state.tablet = true;
-        } else {
-            this.tablet = false;
-            this.$store.state.tablet = false;
+      if (window.innerWidth <= 1000 && window.innerWidth >= 750) {
+        this.tablet = true;
+        this.$store.state.tablet = true;
+      } else {
+        this.tablet = false;
+        this.$store.state.tablet = false;
 
-        }
+      }
       if (window.innerWidth <= 1300) {
         this.tabletHorizontal = true
         this.$store.state.tabletHorizontal = true
