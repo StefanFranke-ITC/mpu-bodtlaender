@@ -949,7 +949,7 @@ a {
     transform: scale(0.6);
     max-width: 220px
 }
-.termin{
+.termin-tablet{
     position: relative;
     left: -10%;
     top: 80%;
