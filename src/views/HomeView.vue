@@ -660,7 +660,7 @@ export default {
       email: '',
       handynummer: '',
       nachricht: '',
-      tab: 5,
+      tab: 0,
     }
   },
   created() {

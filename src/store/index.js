@@ -6,7 +6,7 @@ export default createStore({
     mobile:false,
     tablet:false,
     tabletHorizontal: false,
-    email: "lelegraf1503@gmail.com"
+    email: "info@mpu-institut-saar.de"
   },
   getters: {
   },
