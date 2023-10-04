@@ -98,13 +98,13 @@
     </v-col>
   </v-row>
   <v-row v-if="$store.state.mobile" class="mx-0" style="width: 100%;">
-    <v-col class="cursor" cols="1" style=" max-width: 90px" @click="$router.push('/')">
+    <v-col class="cursor" cols="1" style=" max-width: 90px" @click="$store.state.tab='0'">
       <v-img :src="img"
              class="logo-mobile"
-             @click="$router.push('/')">
+             @click="$store.state.tab='0'">
       </v-img>
     </v-col>
-    <v-col class="cursor pl-0 d-flex " cols="7" @click="$router.push('/')">
+    <v-col class="cursor pl-0 d-flex " cols="7" @click="$store.state.tab='0'">
       <div>
         <h4 class="mb-n6">
           MPU Vorbereitung

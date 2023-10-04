@@ -168,7 +168,7 @@
       <div class="tab-card">
 
         <v-tabs
-            v-model="tab"
+            v-model="$store.state.tab"
             align-tabs="center"
             center-active
             color="rgba(255, 176, 1, 0.7)">
@@ -182,7 +182,7 @@
 
         </v-tabs>
 
-        <v-window v-model="tab">
+        <v-window v-model="$store.state.tab">
           <v-window-item
               :value="0"
           >
@@ -429,6 +429,65 @@
                     Ich freue mich darauf, Sie kennenzulernen und gemeinsam mit Ihnen an Ihren persönlichen Zielen zu
                     arbeiten.
                   </v-card-text>
+                  <v-card-text>
+                    <div class="mt-n6">
+                      <v-dialog width="500">
+                        <template v-slot:activator="{ props }">
+                          <div :class="$store.state.tablet ? 'termin-tablet': 'termin'"
+                               class="cursor termin mt-6 ml-12 d-flex align-center justify-center button-rechts"
+                               style=""
+                               v-bind="props">
+                            <h3>
+                              Termin Vereinbaren
+                            </h3>
+                          </div>
+                        </template>
+                        <template v-slot:default="{ isActive }">
+                          <v-card :class="$store.state.tablet ? 'kontaktformular-tablet':'kontaktformular-mobile'"
+                                  class=" pt-4 ">
+                            <v-row class="d-flex justify-center mx-0" style="width: 100%">
+                              <v-col cols="10">
+                                <h3>Bitte füllen Sie das Formular aus, und ich werde mich umgehend bei Ihnen
+                                  melden.</h3>
+                              </v-col>
+                              <v-col cols="10">
+                                <v-text-field v-model="vorname" label="Vorname" type="name" variant="outlined">
+
+                                </v-text-field>
+                              </v-col>
+                              <v-col class="formularinhalte" cols="10">
+                                <v-text-field v-model="nachname" label="Nachname" type="name" variant="outlined">
+
+                                </v-text-field>
+                              </v-col>
+                              <v-col class="formularinhalte" cols="10">
+                                <v-text-field v-model="email" label="Email" type="email" variant="outlined">
+
+                                </v-text-field>
+                              </v-col>
+                              <v-col class="formularinhalte" cols="10">
+                                <v-text-field v-model="handynummer" label="Handynummer" type="tel" variant="outlined">
+
+                                </v-text-field>
+                              </v-col>
+
+                            </v-row>
+                            <v-card-actions class="px-14 mb-6 d-flex justify-space-between">
+                              <v-btn
+                                  text="Senden"
+                                  @click="sendAppointmentEmail"
+                              ></v-btn>
+                              <v-btn
+                                  text="Abbrechen "
+                                  @click="isActive.value = false"
+                              ></v-btn>
+
+                            </v-card-actions>
+                          </v-card>
+                        </template>
+                      </v-dialog>
+                    </div>
+                  </v-card-text>
                 </v-card>
               </div>
             </v-container>
@@ -509,6 +568,36 @@
 
 
                                 <p>Quelle:<br>e-recht24.de</p>
+
+                                <br>
+
+                                <header aria-label="Inhalt" class="entry-header">
+                                  <h1 class="entry-title text-black" itemprop="headline">Website</h1></header>
+
+                                <p>
+                                  <strong>
+                                    Website created by
+                                  </strong>
+                                  <br>
+
+                                </p>
+
+                                <ul>
+                                  <li>
+                                    <h4>
+                                      <a href="https://leandro-graf.de" target="_blank">Leandro Graf</a>
+                                    </h4>
+                                  </li>
+                                  <li>
+                                    <h4>
+                                      <a href="https://franke-arts.de" target="_blank">Stefan Franke</a>
+                                    </h4>
+                                  </li>
+                                </ul>
+
+                                <p></p>
+
+                                <br>
 
 
                                 <p></p>
@@ -678,6 +767,7 @@ import {Icon} from '@iconify/vue';
 import HeaderComponent from "@/components/HeaderComponent.vue";
 import axios from "axios";
 import FooterComponent from "@/components/FooterComponent.vue";
+import {mapGetters} from "vuex";
 
 export default {
   name: 'HomeView',
@@ -688,13 +778,12 @@ export default {
       email: '',
       handynummer: '',
       nachricht: '',
-      tab: 0,
     }
   },
   created() {
   },
-  mounted() {
-
+  computed: {
+    ...mapGetters(['tab'])
   },
   methods: {
     async sendEmail() {
