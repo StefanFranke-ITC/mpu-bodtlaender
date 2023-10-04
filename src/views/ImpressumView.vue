@@ -102,10 +102,14 @@
 
 
                               <p>Benjamin Bodtländer<br>Institut für MPU-Beratung und Suchtprävention<br>Alter Woog
-                                13<br>66606 Sankt Wendel<br></p>
+                                13<br>66606 Sankt Wendel<br><br></p>
 
 
-                              <p><strong>Kontakt</strong><br>Telefon: 0151 21225525<br>E-Mail: Info@MPU-Institut-Saar.de<br>
+                              <p>
+                                <strong>
+                                  Kontakt
+                                </strong>
+                                <br>Telefon: 0151 21225525<br>E-Mail: Info@MPU-Institut-Saar.de<br>
                               </p>
 
 
@@ -116,23 +120,48 @@
 
                               <p>Quelle:<br>e-recht24.de</p>
 
+                              <br>
+
+                              <header aria-label="Inhalt" class="entry-header">
+                                <h1 class="entry-title" itemprop="headline">Website</h1></header>
+
+                              <p>
+                                <strong>
+                                  Website created by
+                                </strong>
+                                <br>
+                                
+                              </p>
+
+                              <ul>
+                                <li>
+                                  <h4>
+                                    <a href="https://leandro-graf.de" target="_blank">Leandro Graf</a>
+                                  </h4>
+                                </li>
+                                <li>
+                                  <h4>
+                                    <a href="https://franke-arts.de" target="_blank">Stefan Franke</a>
+                                  </h4>
+                                </li>
+                              </ul>
 
                               <p></p>
 
-
+                              <br>
                               <p style="font-size:25px"><strong>Datenschutzerklärung</strong></p>
 
 
                               <h4 class="wp-block-heading">Zugriffsdaten</h4>
 
-
+                              <br>
                               <p>Wir, der Websitebetreiber bzw. Seitenprovider, erheben aufgrund unseres berechtigten
                                 Interesses (s. Art. 6 Abs. 1 lit. f. DSGVO) Daten über Zugriffe auf die Website und
                                 speichern diese als „Server-Logfiles“ auf dem Server der Website ab. Folgende Daten
                                 werden so protokolliert:</p>
 
 
-                              <ul>
+                              <ul class="ml-5">
                                 <li>Besuchte Website</li>
 
 
@@ -159,7 +188,7 @@
                                 Die Speicherung der Daten erfolgt aus Sicherheitsgründen, um z. B. Missbrauchsfälle
                                 aufklären zu können. Müssen Daten aus Beweisgründen aufgehoben werden, sind sie solange
                                 von der Löschung ausgenommen bis der Vorfall endgültig geklärt ist.</p>
-
+                              <br>
 
                               <h4 class="wp-block-heading">Reichweitenmessung &amp; Cookies</h4>
 
@@ -176,9 +205,9 @@
 
                               <p>Falls Sie nicht möchten, dass Cookies zur Reichweitenmessung auf Ihrem Endgerät
                                 gespeichert werden, können Sie dem Einsatz dieser Dateien hier widersprechen:</p>
+                              <br>
 
-
-                              <ul>
+                              <ul class="ml-5">
                                 <li>Cookie-Deaktivierungsseite der Netzwerkwerbeinitiative: <a
                                     href="http://optout.networkadvertising.org/?c=1#!/">http://optout.networkadvertising.org/?c=1#!/</a>
                                 </li>
@@ -193,7 +222,7 @@
                                     href="http://optout.networkadvertising.org/?c=1#!/">http://optout.networkadvertising.org/?c=1#!/</a>
                                 </li>
                               </ul>
-
+                              <br>
 
                               <p>Gängige Browser bieten die Einstellungsoption, Cookies nicht zuzulassen. Hinweis: Es
                                 ist nicht gewährleistet, dass Sie auf alle Funktionen dieser Website ohne
@@ -219,18 +248,18 @@
                                 angeforderte Datei oder der Name Ihres Internet-Providers. Durch die Anonymisierung der
                                 Daten sind Rückschlüsse auf Ihre Person nicht möglich.</p>
 
-
+                              <br>
                               <p><strong>Umgang mit Kontaktdaten</strong></p>
-
+                              <br>
 
                               <p>Nehmen Sie mit uns als Websitebetreiber durch die angebotenen Kontaktmöglichkeiten
                                 Verbindung auf, werden Ihre Angaben gespeichert, damit auf diese zur Bearbeitung und
                                 Beantwortung Ihrer Anfrage zurückgegriffen werden kann. Ohne Ihre Einwilligung werden
                                 diese Daten nicht an Dritte weitergegeben.</p>
 
-
+                              <br>
                               <p><strong>Umgang mit Kommentaren und Beiträgen</strong></p>
-
+                              <br>
 
                               <p>Hinterlassen Sie auf dieser Website einen Beitrag oder Kommentar, wird Ihre IP-Adresse
                                 gespeichert. Dies erfolgt aufgrund unserer berechtigten Interessen im Sinne des Art. 6
@@ -300,7 +329,7 @@ a {
 .profil-bild1 {
   height: 40vh;
   width: 100%;
-  background-image: url("/src/assets/impressum.jpg");
+  background-image: url("/src/assets/dsgvo.webp");
   background-size: cover;
   border-radius: 70px 70px 70px 200px;
   box-shadow: 4px 4px 15px black;

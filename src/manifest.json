@@ -1,15 +1,8 @@
 {
-    "name": "Bodtländer",
-    "short_name": "Bodtländer",
-    "start_url": "./",
-    "display": "standalone",
-    "background_color": "#ffffff",
-    "theme_color": "#42b983",
-    "icons": [
-    {
-        "src": "/img/icons/icon-192x192.png",
-        "sizes": "192x192",
-        "type": "image/png"
-    }
-]
+  "name": "Bodtländer",
+  "short_name": "Bodtländer",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#42b983"
 }

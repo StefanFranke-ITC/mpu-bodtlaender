@@ -15,25 +15,27 @@
                 <v-card class="pa-5"
                         style="background-color: transparent; box-shadow: 0px 0px; overflow-y: scroll; max-height: 70vh; color: #e3dede">
                   <v-card-title>
-                    MPU-Vorbereitung und Beratung im Saarland
+                    MPU-Vorbereitung und Beratung in St. Wendel
                   </v-card-title>
                   <v-card-text>
-                    In meiner MPU-Vorbereitung im Saarland, sei es bei Ihnen zu Hause, online oder in meinem Büro in St.
+                    In meiner MPU-Vorbereitung in St. Wendel, sei es bei Ihnen zu Hause, online oder in meiner Praxis in
+                    St.
                     Wendel, verfolge ich einen ganzheitlichen Ansatz, um Sie bestmöglich auf Ihre bevorstehende
                     Medizinisch-Psychologische Untersuchung (MPU) vorzubereiten. Ich möchte, dass Sie sich optimal
                     vorbereitet und selbstbewusst fühlen, wenn Sie den Gutachter treffen.
                   </v-card-text>
                   <v-card-title>
-                    Individuelle Anpassung
+                    Preise
                   </v-card-title>
                   <v-card-text>
-                    Die Standard-MPU-Vorbereitung <b> umfasst in der Regel elf Stunden und kann als Paket für
-                    750 Euro
-                    gebucht
-                    werden. </b> Jeder Mensch ist einzigartig, und daher kann es sinnvoll sein, den Umfang der
-                    Vorbereitung
-                    individuell anzupassen. Bei Bedarf können <b> zusätzliche Stunden à 75 Euro hinzugebucht
-                    werden. </b>
+                    <ul class="ml-5">
+                      <li> eine Stunde: <b> 75 Euro </b></li>
+                      <li> 10 Stunden: <b> 750 Euro </b> + 11. Stunde <b> gratis </b></li>
+                      <li> Anfahrtsgebühren: nach Rücksprache ggf. Pauschale</li>
+                      <li> Es können zusätzliche Stunden hinzugebucht
+                        werden, Preise dann in Absprache
+                      </li>
+                    </ul>
                   </v-card-text>
                   <v-card-title>
                     Gemeinsame Arbeit an Ihren Verstößen
@@ -64,13 +66,6 @@
                     Wir nehmen uns ausreichend Zeit, um den "Ernstfall" zu proben, indem wir das Gespräch mit dem
                     Gutachter mehrmals durchgehen. Dies hilft dabei, mögliche Fallstricke frühzeitig zu erkennen und zu
                     überwinden. Ihr Erfolg bei der MPU ist unser gemeinsames Ziel.
-                  </v-card-text>
-                  <v-card-title>
-                    Hausbesuche und Anfahrtsgebühren
-                  </v-card-title>
-                  <v-card-text>
-                    Bei Hausbesuchen berechne ich nach Rücksprache zusätzlich eine Pauschale für die Anfahrt, um
-                    sicherzustellen, dass Sie bequem an unseren Sitzungen teilnehmen können.
                   </v-card-text>
                   <v-card-text>
                     Mein vorrangiges Ziel ist es, Sie bestmöglich auf die MPU vorzubereiten und sicherzustellen, dass

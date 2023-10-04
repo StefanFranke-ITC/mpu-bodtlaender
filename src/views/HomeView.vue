@@ -12,10 +12,10 @@
             <v-col cols="5">
               <div style="max-width: 90%">
                 <h1 v-if="!$store.state.tabletHorizontal" class="text-white">
-                  Willkommen beim Institut <br> für MPU-Beratung und<br> Suchtprävention <br> im Saarland.
+                  Willkommen beim Institut <br> für MPU-Beratung und<br> Suchtprävention <br> in St. Wendel.
                 </h1>
                 <h3 v-if="$store.state.tabletHorizontal" class="text-white">
-                  Willkommen beim Institut <br> für MPU-Beratung und<br> Suchtprävention <br> im Saarland.
+                  Willkommen beim Institut <br> für MPU-Beratung und<br> Suchtprävention <br> in St. Wendel.
                 </h3>
                 <p v-if="!$store.state.tabletHorizontal" class="text-white mt-10">
                   Ihr Ansprechpartner rund um das Thema Medizinisch-Psychologische Untersuchung (MPU).
@@ -175,8 +175,8 @@
           <v-tab :value="0" class="">Home</v-tab>
           <v-tab :value="1" class="">MPU</v-tab>
           <v-tab :value="2" class="">Info</v-tab>
-          <v-tab :value="3" class="">Kontakt</v-tab>
-          <v-tab :value="4" class="">Über mich</v-tab>
+          <v-tab :value="3" class="">Über mich</v-tab>
+          <v-tab :value="4" class="">Kontakt</v-tab>
           <v-tab :value="5" class="">Impressum</v-tab>
 
 
@@ -193,7 +193,7 @@
                     Willkommen beim Institut
                     für MPU-Beratung und
                     Suchtprävention
-                    im Saarland.
+                    in St. Wendel.
                   </h4>
 
                 </v-col>
@@ -330,25 +330,27 @@
                   <v-card
                       style="background-color: transparent; box-shadow: 0px 0px; overflow-y: scroll; max-height: 100%; color: #e3dede">
                     <v-card-title>
-                      MPU-Vorbereitung und <br> Beratung im Saarland
+                      MPU-Vorbereitung und <br> Beratung in St. Wendel
                     </v-card-title>
                     <v-card-text>
-                      In meiner MPU-Vorbereitung im Saarland, sei es bei Ihnen zu Hause, online oder in meinem Büro in
+                      In meiner MPU-Vorbereitung in St. Wendel, sei es bei Ihnen zu Hause, online oder in meinem Büro in
                       St.
                       Wendel, verfolge ich einen ganzheitlichen Ansatz, um Sie bestmöglich auf Ihre bevorstehende
                       Medizinisch-Psychologische Untersuchung (MPU) vorzubereiten. Ich möchte, dass Sie sich optimal
                       vorbereitet und selbstbewusst fühlen, wenn Sie den Gutachter treffen.
                     </v-card-text>
                     <v-card-title>
-                      Preis u. Individuelle <br> Anpassung
+                      Preise
                     </v-card-title>
                     <v-card-text>
-                      Die Standard-MPU-Vorbereitung umfasst in der Regel elf Stunden und kann als Paket für <b>
-                      750 Euro
-                    </b>
-                      gebucht
-                      werden. Jeder Mensch ist einzigartig, und daher kann es sinnvoll sein, den Umfang der Vorbereitung
-                      individuell anzupassen. Bei Bedarf können zusätzliche Stunden à 75 Euro hinzugebucht werden.
+                      <ul class="ml-5">
+                        <li> eine Stunde: <b> 75 Euro </b></li>
+                        <li> 10 Stunden: <b> 750 Euro </b> + 11. Stunde <b> gratis </b></li>
+                        <li> Anfahrtsgebühren: nach Rücksprache ggf. Pauschale</li>
+                        <li> Es können zusätzliche Stunden hinzugebucht
+                          werden, Preise dann in Absprache
+                        </li>
+                      </ul>
                     </v-card-text>
                     <v-card-title>
                       Gemeinsame Arbeit <br> an Ihren Verstößen
@@ -404,9 +406,40 @@
             <v-container>
               <div class="d-flex justify-center">
                 <v-card class="pt-4 kontaktformular-mobile1" style="overflow: scroll">
+                  <v-card-title>
+                    Über Mich
+                  </v-card-title>
+                  <v-card-text>
+                    Ich wurde 1988 im schönen Saarland, genauer gesagt in Sankt Wendel, geboren. Die enge Verbundenheit
+                    mit dieser Region hat mein Leben geprägt und meine Wurzeln gestärkt.
+                  </v-card-text>
+                  <v-card-text>
+                    Nach meiner Schulzeit habe ich mich für eine berufliche Laufbahn entschieden, die es mir ermöglicht,
+                    anderen Menschen zu helfen und sie auf ihrem Weg zu unterstützen. Ich absolvierte eine Ausbildung
+                    zum Heilpraktiker für Psychotherapie und erlangte die Qualifikation zum geprüften psychologischen
+                    Berater. Doch meine Leidenschaft für das Lernen und die ständige Weiterentwicklung führten mich auch
+                    zur kognitiven Verhaltenstherapie und schließlich zur Zusatzqualifikation als geprüfter MPU-Berater.
+                  </v-card-text>
+                  <v-card-text>
+                    Meine berufliche Reise hat mir nicht nur wertvolles Fachwissen vermittelt, sondern auch Empathie und
+                    die Fähigkeit, auf individuelle Bedürfnisse einzugehen. Ich schätze den Austausch mit Menschen und
+                    bin stets daran interessiert, Lösungen zu finden, die ihr Leben positiv beeinflussen können.
+                  </v-card-text>
+                  <v-card-text>
+                    Ich freue mich darauf, Sie kennenzulernen und gemeinsam mit Ihnen an Ihren persönlichen Zielen zu
+                    arbeiten.
+                  </v-card-text>
+                </v-card>
+              </div>
+            </v-container>
+          </v-window-item>
+          <v-window-item :value="4">
+            <v-container>
+              <div class="d-flex justify-center">
+                <v-card class="pt-4 kontaktformular-mobile1" style="overflow: scroll">
                   <v-row class="d-flex justify-center mx-0" style="width: 100%">
                     <v-col cols="10">
-                      <h5>Bitte füllen Sie das Formular aus, und ich werde mich umgehend bei Ihnen melden.</h5>
+                      <h4>Bitte füllen Sie das Formular aus, und ich werde mich umgehend bei Ihnen melden.</h4>
                     </v-col>
                     <v-col cols="10">
                       <v-text-field v-model="vorname" label="Vorname" variant="outlined"/>
@@ -433,11 +466,6 @@
                 </v-card>
 
               </div>
-            </v-container>
-          </v-window-item>
-          <v-window-item :value="4">
-            <v-container>
-              <!---- input-->
             </v-container>
           </v-window-item>
           <v-window-item :value="5">
@@ -498,7 +526,7 @@
                                   werden so protokolliert:</p>
 
 
-                                <ul>
+                                <ul class="ml-5">
                                   <li>Besuchte Website</li>
 
 
@@ -547,7 +575,7 @@
                                   gespeichert werden, können Sie dem Einsatz dieser Dateien hier widersprechen:</p>
 
 
-                                <ul>
+                                <ul class="ml-5">
                                   <li>Cookie-Deaktivierungsseite der Netzwerkwerbeinitiative: <a
                                       href="http://optout.networkadvertising.org/?c=1#!/">http://optout.networkadvertising.org/?c=1#!/</a>
                                   </li>
@@ -670,19 +698,20 @@ export default {
   },
   methods: {
     async sendEmail() {
-      try {
-        const response = await axios.post('/sendMailAsHTML', {
-              "to": this.$store.state.email,
-              "subject": this.vorname + " " + this.nachname + " möchte kontakt mit dir aufnehmen.",
-              "htmlText": "<div><h3>Hallo Benjamin,</h3><p>" + this.vorname + " " + this.nachname + " möchte kontakt mit dir aufnehmen. Im Folgenden siehst du seine eingetragenen Daten und die dazugehörige Nachricht:</p><p>Vorname: " + this.vorname + "<br>Nachname: " + this.nachname + "<br>Telefonnummer: <a href=\"tel:" + this.handynummer + "\">" + this.handynummer + "</a><br>Email: <a href=\"mailto:" + this.email + "\">" + this.email + "</a><br>Nachricht: <br> <br> " + this.nachricht + "</p><br><p>Mit freundlichen Grüßen<br>Dein FastGlobeIT-Team</p><i>Diese E-Mail wurde automatisch erzeugt.</i></div>"
-            }
-        )
-        console.log(response)
+      if (this.email !== '' && this.vorname !== '' && this.nachname !== '') {
         try {
           const response = await axios.post('/sendMailAsHTML', {
-                "to": this.email,
-                "subject": "Sie haben eine Kontaktanfrage geschickt",
-                "htmlText": `
+                "to": this.$store.state.email,
+                "subject": this.vorname + " " + this.nachname + " möchte kontakt mit dir aufnehmen.",
+                "htmlText": "<div><h3>Hallo Benjamin,</h3><p>" + this.vorname + " " + this.nachname + " möchte kontakt mit dir aufnehmen. Im Folgenden siehst du seine eingetragenen Daten und die dazugehörige Nachricht:</p><p>Vorname: " + this.vorname + "<br>Nachname: " + this.nachname + "<br>Telefonnummer: <a href=\"tel:" + this.handynummer + "\">" + this.handynummer + "</a><br>Email: <a href=\"mailto:" + this.email + "\">" + this.email + "</a><br>Nachricht: <br> <br> " + this.nachricht + "</p><br><p>Mit freundlichen Grüßen<br>Dein FastGlobeIT-Team</p><i>Diese E-Mail wurde automatisch erzeugt.</i></div>"
+              }
+          )
+          console.log(response)
+          try {
+            const response = await axios.post('/sendMailAsHTML', {
+                  "to": this.email,
+                  "subject": "Sie haben eine Kontaktanfrage geschickt",
+                  "htmlText": `
     <div>
       <h3>
         Hallo ` + this.vorname + ` ` + this.nachname + `
@@ -705,36 +734,38 @@ export default {
       <i>Diese E-Mail wurde automatisch erzeugt.</i>
     </div>
   `
-              }
-          )
-          console.log(response)
+                }
+            )
+            console.log(response)
+          } catch (e) {
+            console.log(e)
+          }
+
+          this.vorname = 'Vielen Dank für Ihre Anfrage.'
+          this.nachname = 'Benjamin Bodtländer wurde benachrichtigt.'
+          this.email = ''
+          this.handynummer = ''
+          this.nachricht = ''
         } catch (e) {
           console.log(e)
         }
-
-        this.vorname = 'Vielen Dank für Ihre Anfrage.'
-        this.nachname = 'Benjamin Bodtländer wurde benachrichtigt.'
-        this.email = ''
-        this.handynummer = ''
-        this.nachricht = ''
-      } catch (e) {
-        console.log(e)
       }
     },
     async sendAppointmentEmail() {
-      try {
-        const response = await axios.post('/sendMailAsHTML', {
-              "to": this.$store.state.email,
-              "subject": this.vorname + " " + this.nachname + " möchte mit dir einen Termin vereinbaren",
-              "htmlText": "<div><h3>Hallo Benjamin,</h3><p>" + this.vorname + " " + this.nachname + " möchte mit dir einen neuen Termin vereinbaren. Im Folgenden siehst du seine eingetragenen Daten:</p><p>Vorname: " + this.vorname + "<br>Nachname: " + this.nachname + "<br>Telefonnummer: <a href=\"tel:" + this.handynummer + "\">" + this.handynummer + "</a><br>Email: <a href=\"mailto:" + this.email + "\">" + this.email + "</a></p><br><p>Mit freundlichen Grüßen<br>Dein FastGlobeIT-Team</p><i>Diese E-Mail wurde automatisch erzeugt.</i></div>"
-            }
-        )
-        console.log(response)
+      if (this.email !== '' && this.vorname !== '' && this.nachname !== '') {
         try {
           const response = await axios.post('/sendMailAsHTML', {
-                "to": this.email,
-                "subject": "Sie haben eine Terminanfrage geschickt",
-                "htmlText": `
+                "to": this.$store.state.email,
+                "subject": this.vorname + " " + this.nachname + " möchte mit dir einen Termin vereinbaren",
+                "htmlText": "<div><h3>Hallo Benjamin,</h3><p>" + this.vorname + " " + this.nachname + " möchte mit dir einen neuen Termin vereinbaren. Im Folgenden siehst du seine eingetragenen Daten:</p><p>Vorname: " + this.vorname + "<br>Nachname: " + this.nachname + "<br>Telefonnummer: <a href=\"tel:" + this.handynummer + "\">" + this.handynummer + "</a><br>Email: <a href=\"mailto:" + this.email + "\">" + this.email + "</a></p><br><p>Mit freundlichen Grüßen<br>Dein FastGlobeIT-Team</p><i>Diese E-Mail wurde automatisch erzeugt.</i></div>"
+              }
+          )
+          console.log(response)
+          try {
+            const response = await axios.post('/sendMailAsHTML', {
+                  "to": this.email,
+                  "subject": "Sie haben eine Terminanfrage geschickt",
+                  "htmlText": `
     <div>
       <h3>
         Hallo ` + this.vorname + ` ` + this.nachname + `
@@ -757,21 +788,22 @@ export default {
       <i>Diese E-Mail wurde automatisch erzeugt.</i>
     </div>
   `
-              }
-          )
-          console.log(response)
+                }
+            )
+            console.log(response)
+          } catch (e) {
+            console.log(e)
+          }
+
+          this.vorname = 'Vielen Dank für Ihre Anfrage.'
+          this.nachname = 'Benjamin Bodtländer wurde benachrichrigt.'
+          this.email = ''
+          this.handynummer = ''
         } catch (e) {
           console.log(e)
         }
-
-        this.vorname = 'Vielen Dank für Ihre Anfrage.'
-        this.nachname = 'Benjamin Bodtländer wurde benachrichrigt.'
-        this.email = ''
-        this.handynummer = ''
-      } catch (e) {
-        console.log(e)
       }
-    },
+    }
   },
   components: {
     FooterComponent,
@@ -951,6 +983,7 @@ export default {
 
 .v-card-title {
   text-shadow: 1px 1px black;
+  color: white;
 }
 
 p {

@@ -140,19 +140,20 @@ export default {
   },
   methods: {
     async sendEmail() {
-      try {
-        const response = await axios.post('/sendMailAsHTML', {
-              "to": this.$store.state.email,
-              "subject": this.vorname + " " + this.nachname + " möchte kontakt mit dir aufnehmen.",
-              "htmlText": "<div><h3>Hallo Benjamin,</h3><p>" + this.vorname + " " + this.nachname + " möchte kontakt mit dir aufnehmen. Im Folgenden siehst du seine eingetragenen Daten und die dazugehörige Nachricht:</p><p>Vorname: " + this.vorname + "<br>Nachname: " + this.nachname + "<br>Telefonnummer: <a href=\"tel:" + this.handynummer + "\">" + this.handynummer + "</a><br>Email: <a href=\"mailto:" + this.email + "\">" + this.email + "</a><br>Nachricht: <br> <br> " + this.nachricht + "</p><br><p>Mit freundlichen Grüßen<br>Dein FastGlobeIT-Team</p><i>Diese E-Mail wurde automatisch erzeugt.</i></div>"
-            }
-        )
-        console.log(response)
+      if (this.email !== '' && this.vorname !== '' && this.nachname !== '') {
         try {
           const response = await axios.post('/sendMailAsHTML', {
-                "to": this.email,
-                "subject": "Sie haben eine Kontaktanfrage geschickt",
-                "htmlText": `
+                "to": this.$store.state.email,
+                "subject": this.vorname + " " + this.nachname + " möchte kontakt mit dir aufnehmen.",
+                "htmlText": "<div><h3>Hallo Benjamin,</h3><p>" + this.vorname + " " + this.nachname + " möchte kontakt mit dir aufnehmen. Im Folgenden siehst du seine eingetragenen Daten und die dazugehörige Nachricht:</p><p>Vorname: " + this.vorname + "<br>Nachname: " + this.nachname + "<br>Telefonnummer: <a href=\"tel:" + this.handynummer + "\">" + this.handynummer + "</a><br>Email: <a href=\"mailto:" + this.email + "\">" + this.email + "</a><br>Nachricht: <br> <br> " + this.nachricht + "</p><br><p>Mit freundlichen Grüßen<br>Dein FastGlobeIT-Team</p><i>Diese E-Mail wurde automatisch erzeugt.</i></div>"
+              }
+          )
+          console.log(response)
+          try {
+            const response = await axios.post('/sendMailAsHTML', {
+                  "to": this.email,
+                  "subject": "Sie haben eine Kontaktanfrage geschickt",
+                  "htmlText": `
     <div>
       <h3>
         Hallo ` + this.vorname + ` ` + this.nachname + `
@@ -175,20 +176,21 @@ export default {
       <i>Diese E-Mail wurde automatisch erzeugt.</i>
     </div>
   `
-              }
-          )
-          console.log(response)
+                }
+            )
+            console.log(response)
+          } catch (e) {
+            console.log(e)
+          }
+
+          this.vorname = 'Vielen Dank für Ihre Anfrage.'
+          this.nachname = 'Benjamin Bodtländer wurde benachrichtigt.'
+          this.email = ''
+          this.handynummer = ''
+          this.nachricht = ''
         } catch (e) {
           console.log(e)
         }
-
-        this.vorname = 'Vielen Dank für Ihre Anfrage.'
-        this.nachname = 'Benjamin Bodtländer wurde benachrichtigt.'
-        this.email = ''
-        this.handynummer = ''
-        this.nachricht = ''
-      } catch (e) {
-        console.log(e)
       }
     }
   }

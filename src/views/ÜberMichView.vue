@@ -17,6 +17,26 @@
                   <v-card-title>
                     Über Mich
                   </v-card-title>
+                  <v-card-text>
+                    Ich wurde 1988 im schönen Saarland, genauer gesagt in Sankt Wendel, geboren. Die enge Verbundenheit
+                    mit dieser Region hat mein Leben geprägt und meine Wurzeln gestärkt.
+                  </v-card-text>
+                  <v-card-text>
+                    Nach meiner Schulzeit habe ich mich für eine berufliche Laufbahn entschieden, die es mir ermöglicht,
+                    anderen Menschen zu helfen und sie auf ihrem Weg zu unterstützen. Ich absolvierte eine Ausbildung
+                    zum Heilpraktiker für Psychotherapie und erlangte die Qualifikation zum geprüften psychologischen
+                    Berater. Doch meine Leidenschaft für das Lernen und die ständige Weiterentwicklung führten mich auch
+                    zur kognitiven Verhaltenstherapie und schließlich zur Zusatzqualifikation als geprüfter MPU-Berater.
+                  </v-card-text>
+                  <v-card-text>
+                    Meine berufliche Reise hat mir nicht nur wertvolles Fachwissen vermittelt, sondern auch Empathie und
+                    die Fähigkeit, auf individuelle Bedürfnisse einzugehen. Ich schätze den Austausch mit Menschen und
+                    bin stets daran interessiert, Lösungen zu finden, die ihr Leben positiv beeinflussen können.
+                  </v-card-text>
+                  <v-card-text>
+                    Ich freue mich darauf, Sie kennenzulernen und gemeinsam mit Ihnen an Ihren persönlichen Zielen zu
+                    arbeiten.
+                  </v-card-text>
                 </v-card>
 
               </div>
