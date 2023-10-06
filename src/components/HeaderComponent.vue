@@ -43,7 +43,7 @@
       </h4>
     </v-col>
     <v-col class="d-flex align-center" cols="2">
-      <div class="cursor d-flex align-center justify-center ueber-mich" @click="$router.push('überMich')">
+      <div class="cursor d-flex align-center justify-center ueber-mich" @click="$router.push('/überMich')">
         <h3>
           Über mich
         </h3>

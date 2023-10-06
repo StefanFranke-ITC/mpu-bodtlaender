@@ -18,29 +18,35 @@
                     Über Mich
                   </v-card-title>
                   <v-card-text>
-                    Ich wurde 1988 im schönen Saarland, genauer gesagt in Sankt Wendel, geboren. Die enge Verbundenheit
-                    mit dieser Region hat mein Leben geprägt und meine Wurzeln gestärkt.
+                    Geboren im Jahr 1988 im Saarland, genauer gesagt in Sankt Wendel, habe ich meine Wurzeln tief in
+                    dieser wunderschönen Region.
                   </v-card-text>
                   <v-card-text>
-                    Nach meiner Schulzeit habe ich mich für eine berufliche Laufbahn entschieden, die es mir ermöglicht,
-                    anderen Menschen zu helfen und sie auf ihrem Weg zu unterstützen. Ich absolvierte eine Ausbildung
-                    zum Heilpraktiker für Psychotherapie und erlangte die Qualifikation zum geprüften psychologischen
-                    Berater. Doch meine Leidenschaft für das Lernen und die ständige Weiterentwicklung führten mich auch
-                    zur kognitiven Verhaltenstherapie und schließlich zur Zusatzqualifikation als geprüfter MPU-Berater.
+                    Ich hab mich für eine vielseitige berufliche Laufbahn entschieden. Nachdem ich meine Ausbildung zum
+                    Heilpraktiker für Psychotherapie abgeschlossen habe, erlangte ich die
+                    Qualifikation als geprüfter psychologischer Berater. Mein ständiger Drang nach
+                    Weiterbildung führte mich auch zur kognitiven Verhaltenstherapie.
                   </v-card-text>
                   <v-card-text>
-                    Meine berufliche Reise hat mir nicht nur wertvolles Fachwissen vermittelt, sondern auch Empathie und
-                    die Fähigkeit, auf individuelle Bedürfnisse einzugehen. Ich schätze den Austausch mit Menschen und
-                    bin stets daran interessiert, Lösungen zu finden, die ihr Leben positiv beeinflussen können.
+                    Darüber hinaus habe ich eine Weiterbildung als MPU- und Suchtberater absolviert, die meine
+                    Fähigkeiten erweitert und es mir ermöglicht, Menschen, die mit Suchtproblemen kämpfen, gezielter zu
+                    helfen.
                   </v-card-text>
                   <v-card-text>
-                    Ich freue mich darauf, Sie kennenzulernen und gemeinsam mit Ihnen an Ihren persönlichen Zielen zu
-                    arbeiten.
+                    Meine berufliche Reise hat mich nicht nur mit fundiertem Fachwissen ausgestattet, sondern auch mit
+                    Empathie und der Fähigkeit, auf die einzigartigen Herausforderungen meiner Klienten einzugehen. Die
+                    Möglichkeit, Lösungen zu entwickeln, die das Leben positiv beeinflussen, erfüllt mich jeden Tag aufs
+                    Neue.
+                  </v-card-text>
+                  <v-card-text>
+                    Ich freue mich darauf, Sie kennenzulernen und gemeinsam an Ihren persönlichen Zielen zu arbeiten.
+                    Als professioneller Berater und Suchtberater stehe ich Ihnen gerne zur Seite und bin bereit, Sie auf
+                    Ihrem Weg zu unterstützen.
                   </v-card-text>
                   <v-card-text>
                     <v-dialog width="500">
                       <template v-slot:activator="{ props }">
-                        <div class="cursor mt-6 d-flex align-center justify-center button-rechts"
+                        <div class="cursor mt-n3 d-flex align-center justify-center button-rechts"
                              style="max-width: 220px"
                              v-bind="props">
                           <h3>
