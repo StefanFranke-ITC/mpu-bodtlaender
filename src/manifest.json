@@ -1,8 +1,0 @@
-{
-  "name": "Bodtländer",
-  "short_name": "Bodtländer",
-  "start_url": "./",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#42b983"
-}
