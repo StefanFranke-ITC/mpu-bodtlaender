@@ -98,7 +98,7 @@
     </v-col>
   </v-row>
   <v-row v-if="$store.state.mobile" class="mx-0" style="width: 100%;">
-    <v-col class="cursor" cols="1" style=" max-width: 90px" @click="$store.state.tab='0'">
+    <v-col class="cursor" cols="1" style="max-width: 90px" @click="$store.state.tab='0'">
       <v-img :src="img"
              class="logo-mobile"
              @click="$store.state.tab='0'">

@@ -32,6 +32,21 @@ const routes = [
         component: ÜberMichView
     },
     {
+        path: '/kontakt',
+        name: 'kontakt',
+        component: HomeView
+    },
+    {
+        path: '/psychologische-beratung',
+        name: 'psychologische-beratung',
+        component: HomeView
+    },
+    {
+        path: '/datenschutz',
+        name: 'datenschutz',
+        component: HomeView
+    },
+    {
         path: '/:catchAll(.*)', component: HomeView
     },
 ]
