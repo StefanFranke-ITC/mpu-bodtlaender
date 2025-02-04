@@ -29,8 +29,8 @@
                   </v-card-title>
                   <v-card-text>
                     <ul class="ml-5">
-                      <li> eine Stunde: <b> 75 Euro </b></li>
-                      <li> 10 Stunden: <b> 750 Euro </b> + 11. Stunde <b> gratis </b></li>
+                      <li> eine Stunde: <b> 85 Euro </b></li>
+                      <li> 10 Stunden: <b> 850 Euro </b> + 11. Stunde <b> gratis </b></li>
                       <li> Anfahrtsgebühren: nach Rücksprache ggf. Pauschale</li>
                       <li> Es können zusätzliche Stunden hinzugebucht
                         werden, Preise dann in Absprache

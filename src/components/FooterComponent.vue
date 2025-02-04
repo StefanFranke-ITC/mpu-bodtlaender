@@ -2,7 +2,7 @@
   <div class="footer-mobile">
     <v-row class=" ma-0" style="height: 100%; width: 100%">
       <v-col class="d-flex justify-center align-center pa-0">
-        <a class="mt-1 text-black" href="mailto:info@example.com" target="_blank">
+        <a class="mt-1 text-black" href="mailto:Info@MPU-Institut-Saar.de" target="_blank">
           <Icon icon="line-md:email" style="font-size: 20px"/>
         </a>
       </v-col>

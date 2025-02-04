@@ -121,7 +121,7 @@
                       Schreib mir eine Mail
                     </h4>
                     <h4>
-                      <a class="text-black" href="mailto:info@example.com" target="_blank">
+                      <a class="text-black" href="mailto:Info@MPU-Institut-Saar.de" target="_blank">
                         Info@MPU-Institut-Saar.de
                       </a>
                     </h4>
@@ -344,8 +344,8 @@
                     </v-card-title>
                     <v-card-text>
                       <ul class="ml-5">
-                        <li> eine Stunde: <b> 75 Euro </b></li>
-                        <li> 10 Stunden: <b> 750 Euro </b> + 11. Stunde <b> gratis </b></li>
+                        <li> eine Stunde: <b> 85 Euro </b></li>
+                        <li> 10 Stunden: <b> 850 Euro </b> + 11. Stunde <b> gratis </b></li>
                         <li> Anfahrtsgebühren: nach Rücksprache ggf. Pauschale</li>
                         <li> Es können zusätzliche Stunden hinzugebucht
                           werden, Preise dann in Absprache
